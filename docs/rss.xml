@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.com/seeu100/blog/assets/138188931/f7f99053-8cce-4845-bed7-a0de9f8e3211</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Thu, 18 Apr 2024 09:46:55 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>13个免费下载 SVG 图标网站</title><link>https://blog.00002000.xyz/post/13-ge-mian-fei-xia-zai-%20SVG%20-tu-biao-wang-zhan.html</link><description>[原文链接](https://blog.csdn.net/Me_Ordinary/article/details/108992807)&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.com/seeu100/blog/assets/138188931/f7f99053-8cce-4845-bed7-a0de9f8e3211</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Thu, 18 Apr 2024 09:52:17 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>13个免费下载 SVG 图标网站</title><link>https://blog.00002000.xyz/post/13-ge-mian-fei-xia-zai-%20SVG%20-tu-biao-wang-zhan.html</link><description>[原文链接](https://blog.csdn.net/Me_Ordinary/article/details/108992807)&#13;
 &#13;
 在前端开发过程中，经常会用到各种图标。在各种图标格式中，因为 SVG 既能满足现有图片的功能的前提下，又是矢量图，在可访问性上面也非常不错，并且有利于 SEO 和无障碍，在性能和维护性方面也比 iconfont 要出色许多，是目前使用最广的类型，今天就给大家介绍一些可以免费 SVG 图标的网站。&#13;
 &#13;
@@ -118,4 +118,29 @@ illustrio 不仅素材库全面，还可以在线自定义配色预览定制的 
 &#13;
 [Gmeek快速上手](https://blog.meekdai.com/post/Gmeek-kuai-su-shang-shou.html)&#13;
 [Issues · Meekdai/Gmeek](https://github.com/Meekdai/Gmeek/issues)&#13;
-$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/post/qian-yi-bo-ke-dao-%20github%20issues.html</guid><pubDate>Thu, 18 Apr 2024 03:52:02 +0000</pubDate></item></channel></rss>
+$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/post/qian-yi-bo-ke-dao-%20github%20issues.html</guid><pubDate>Thu, 18 Apr 2024 03:52:02 +0000</pubDate></item><item><title>关于</title><link>https://blog.00002000.xyz/about.html</link><description>&gt; 我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。&#13;
+&#13;
+## 我的技能&#13;
+&#13;
+- Linux：日常使用、内核编译、环境搭建、Docker&#13;
+- 网站搭建：Ngnix、DNS解析、Hugo、Github Pages&#13;
+- 基因组组装注释&#13;
+- 系统发育建树&#13;
+&#13;
+半桶水技能：&#13;
+- [ ] Shell 编程&#13;
+- [ ] Python&#13;
+- [ ] R&#13;
+- [ ] Rust&#13;
+- [ ] ruby&#13;
+- [ ] C&#13;
+- [ ] Openwrt&#13;
+- [ ] Android&#13;
+- [ ] Java&#13;
+- [ ] javascript&#13;
+&#13;
+## 我的经历&#13;
+&#13;
+- [ ] 2021-2024 十大功劳属的分类修订&#13;
+&#13;
+$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/about.html</guid><pubDate>Thu, 18 Apr 2024 09:51:48 +0000</pubDate></item></channel></rss>
