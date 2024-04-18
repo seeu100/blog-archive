@@ -2,3 +2,11 @@
 
 [Gmeek快速上手](https://blog.meekdai.com/post/Gmeek-kuai-su-shang-shou.html)
 [Issues · Meekdai/Gmeek](https://github.com/Meekdai/Gmeek/issues)
+
+### 如果要导入以前的文章，如何设置发布时间呢？
+
+如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下[网站](https://tool.lu/timestamp)转换。
+
+```html
+<!-- ##{"timestamp":1490764800}## -->
+```

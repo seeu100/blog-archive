@@ -11,7 +11,7 @@
     </script>
 <meta name="description" content="迁移博客到 github issues">
 <title>迁移博客到 github issues</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 </head>
 <style>
@@ -67,7 +67,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div class="markdown-body" id="postBody"><p><a href="https://github.com/Meekdai/Gmeek">Gmeek</a> 一个博客框架，超轻量级个人博客模板，完全基于<code class="notranslate">Github Pages</code> 、 <code class="notranslate">Github Issues</code> 和 <code class="notranslate">Github Actions</code>，可以称作<code class="notranslate">All in Github</code>。不需要本地部署，从搭建到写作，只需要18秒，2步搭建好博客，第3步就是写作。</p>
 <p><a href="https://blog.meekdai.com/post/Gmeek-kuai-su-shang-shou.html" rel="nofollow">Gmeek快速上手</a><br>
-<a href="https://github.com/Meekdai/Gmeek/issues">Issues · Meekdai/Gmeek</a></p></div>
+<a href="https://github.com/Meekdai/Gmeek/issues">Issues · Meekdai/Gmeek</a></p>
+<h3>如果要导入以前的文章，如何设置发布时间呢？</h3>
+<p>如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下<a href="https://tool.lu/timestamp" rel="nofollow">网站</a>转换。</p>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-c">&lt;!-- ##{"timestamp":1490764800}## --&gt;</span></pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;">这里才是你的开始</div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
