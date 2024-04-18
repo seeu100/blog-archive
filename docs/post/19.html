@@ -80,41 +80,17 @@ xorg-xrandr <span class="pl-c"><span class="pl-c">#</span>多屏幕管理</span>
 <div class="highlight highlight-source-shell"><pre class="notranslate">wqy-zenhei <span class="pl-c"><span class="pl-c">#</span>中文字体</span>
 ttf-monaco <span class="pl-c"><span class="pl-c">#</span>英文字体</span></pre></div>
 <h2>基础软件</h2>
-<div class="highlight highlight-source-shell"><pre class="notranslate">firefox <span class="pl-c"><span class="pl-c">#</span>浏览器</span>
-anki <span class="pl-c"><span class="pl-c">#</span>笔记和复习</span>
-tree <span class="pl-c"><span class="pl-c">#</span>查看文件夹结构</span>
+<div class="highlight highlight-source-shell"><pre class="notranslate">tree <span class="pl-c"><span class="pl-c">#</span>查看文件夹结构</span>
 moreutils <span class="pl-c"><span class="pl-c">#</span>vidir等常用小功能</span>
-tmux <span class="pl-c"><span class="pl-c">#</span>终端复用</span>
-yay <span class="pl-c"><span class="pl-c">#</span>AUR管理器</span>
-virtualbox virtualbox-guest-iso <span class="pl-c"><span class="pl-c">#</span>虚拟机</span>
-syncthing <span class="pl-c"><span class="pl-c">#</span>多设备同步</span>
-sudo systemctl <span class="pl-c1">enable</span> --now sycnthing@erwa
-code <span class="pl-c"><span class="pl-c">#</span>编程IDE</span>
-digikam  <span class="pl-c"><span class="pl-c">#</span>照片管理</span>
-gthumb libraw exiv2 <span class="pl-c"><span class="pl-c">#</span>照片简单查看</span>
-xscreensaver <span class="pl-c"><span class="pl-c">#</span>屏幕保护</span>
 acpi <span class="pl-c"><span class="pl-c">#</span>查看剩余电量</span>
 alsa-utils <span class="pl-c"><span class="pl-c">#</span>alsamixer开启声音和音量调节</span>
-ntfs-3g <span class="pl-c"><span class="pl-c">#</span>读取其他文件系统</span>
-teeworlds <span class="pl-c"><span class="pl-c">#</span>联机对战游戏</span>
-keepassxc <span class="pl-c"><span class="pl-c">#</span>密码管理器</span>
+tmux <span class="pl-c"><span class="pl-c">#</span>终端复用</span>
 git <span class="pl-c"><span class="pl-c">#</span>版本管理</span>
-remmina libvncserver freerdp <span class="pl-c"><span class="pl-c">#</span>远程桌面</span>
 xclip <span class="pl-c"><span class="pl-c">#</span>xorg图像粘贴</span>
-amule <span class="pl-c"><span class="pl-c">#</span>ed2k下载器</span>
-vim helix <span class="pl-c"><span class="pl-c">#</span>文本编辑器</span>
-goldendict-ng-git <span class="pl-c"><span class="pl-c">#</span>词典</span>
-rssguard <span class="pl-c"><span class="pl-c">#</span>Rss阅读器</span>
-netease-cloud-music-gtk4 <span class="pl-c"><span class="pl-c">#</span>音乐播放器</span>
-libreoffice-still-zh-cn <span class="pl-c"><span class="pl-c">#</span>办公</span>
-telegram-desktop <span class="pl-c"><span class="pl-c">#</span>即时聊天</span>
+gvim helix <span class="pl-c"><span class="pl-c">#</span>文本编辑器</span>
 xscreensaver <span class="pl-c"><span class="pl-c">#</span>屏幕保护</span>
 flameshot <span class="pl-c"><span class="pl-c">#</span>截图软件</span>
 fsearch <span class="pl-c"><span class="pl-c">#</span>文件查找</span>
-thunar gvfs gvfs-mtp thunar-volman thunar-archive-plugin <span class="pl-c"><span class="pl-c">#</span>文件管理器</span>
-ark unarchiver p7zip <span class="pl-c"><span class="pl-c">#</span>压缩包管理</span>
-tumbler libgsf libgepub libopenraw <span class="pl-c"><span class="pl-c">#</span>thunar文件预览</span>
-okular <span class="pl-c"><span class="pl-c">#</span>PDF查看器</span>
 scrcpy <span class="pl-c"><span class="pl-c">#</span>手机电脑adb连接器</span>
 android-tools <span class="pl-c"><span class="pl-c">#</span>adb和fastboot</span>
 timeshift <span class="pl-c"><span class="pl-c">#</span>系统备份</span>
@@ -123,17 +99,80 @@ wireproxy <span class="pl-c"><span class="pl-c">#</span>代理 wireguard penreso
 proxychains-ng privoxy <span class="pl-c"><span class="pl-c">#</span>代理+http代理</span>
 aria2 wget <span class="pl-c"><span class="pl-c">#</span>下载器</span>
 jre-openjdk jdk-openjdk <span class="pl-c"><span class="pl-c">#</span>JAVA环境</span>
+paru <span class="pl-c"><span class="pl-c">#</span>AUR管理器</span>
+xscreensaver <span class="pl-c"><span class="pl-c">#</span>屏幕保护</span>
+
+firefox <span class="pl-c"><span class="pl-c">#</span>浏览器</span>
+anki <span class="pl-c"><span class="pl-c">#</span>笔记和复习</span>
+code <span class="pl-c"><span class="pl-c">#</span>编程IDE</span>
+zotero-bin <span class="pl-c"><span class="pl-c">#</span>文献管理</span>
+syncthing <span class="pl-c"><span class="pl-c">#</span>多设备同步</span>
+
+<span class="pl-c"><span class="pl-c">#</span> 压缩</span>
+unrar unzip gzip p7zip
+
+<span class="pl-c"><span class="pl-c">#</span> 科学上网</span>
+obfs4proxy tor v2ray wireproxy
+
+<span class="pl-c"><span class="pl-c">#</span> 编程</span>
+gdb
 ruby npm <span class="pl-c"><span class="pl-c">#</span>编程语言</span>
 r gcc-fortran tk <span class="pl-c"><span class="pl-c">#</span>安装R(rstudio图形IDE)</span>
 <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>options("repos" = c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/"))<span class="pl-pds">'</span></span> <span class="pl-k">&gt;&gt;</span> <span class="pl-k">~</span>/.Rprofile
+
+<span class="pl-c"><span class="pl-c">#</span>照片</span>
+digikam  <span class="pl-c"><span class="pl-c">#</span>照片管理</span>
+gthumb libraw exiv2 <span class="pl-c"><span class="pl-c">#</span>照片简单查看</span>
+tumbler libgsf libgepub libopenraw <span class="pl-c"><span class="pl-c">#</span>thunar文件预览</span>
+
+<span class="pl-c"><span class="pl-c">#</span># 输入法</span>
+fcitx5 fcitx5-chinese-addons fcitx5-qt fcitx5-gtk fcitx5-configtool fcitx5-pinyin-zhwiki 
+
+<span class="pl-c"><span class="pl-c">#</span> 生物学专业软件</span>
+bandage blast+ clustalx clustalw figtree-bin gourou-bin megax-bin
+sra-tools-bin python-ncbi-genome-download <span class="pl-c"><span class="pl-c">#</span>NCBI数据下载</span>
+
+<span class="pl-c"><span class="pl-c">#</span> 工具</span>
+create_ap copyq  frpc  geeqie   okular notepadqq  syncthing scrcpy tigervnc chromium
+
+remmina libvncserver freerdp <span class="pl-c"><span class="pl-c">#</span>远程桌面</span>
+
+
+
+virtualbox virtualbox-guest-iso <span class="pl-c"><span class="pl-c">#</span>虚拟机</span>
+
+sudo systemctl <span class="pl-c1">enable</span> --now sycnthing@erwa
+
+
+
+
+ntfs-3g <span class="pl-c"><span class="pl-c">#</span>读取其他文件系统</span>
+teeworlds <span class="pl-c"><span class="pl-c">#</span>联机对战游戏</span>
+keepassxc <span class="pl-c"><span class="pl-c">#</span>密码管理器</span>
+
+
+
+amule <span class="pl-c"><span class="pl-c">#</span>ed2k下载器</span>
+goldendict-ng-git <span class="pl-c"><span class="pl-c">#</span>词典</span>
+
+rssguard <span class="pl-c"><span class="pl-c">#</span>Rss阅读器</span>
+netease-cloud-music-gtk4 <span class="pl-c"><span class="pl-c">#</span>音乐播放器</span>
+libreoffice-still-zh-cn <span class="pl-c"><span class="pl-c">#</span>办公</span>
+telegram-desktop <span class="pl-c"><span class="pl-c">#</span>即时聊天</span>
+
+thunar gvfs gvfs-mtp thunar-volman thunar-archive-plugin <span class="pl-c"><span class="pl-c">#</span>文件管理器</span>
+ark unarchiver p7zip <span class="pl-c"><span class="pl-c">#</span>压缩包管理</span>
+
+okular <span class="pl-c"><span class="pl-c">#</span>PDF查看器</span>
+
+
 
 <span class="pl-c"><span class="pl-c">#</span> 安装pip</span>
 
 sudo pacman -S python-pip
 pip config <span class="pl-c1">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 pip install name --user
-<span class="pl-c"><span class="pl-c">#</span>zotero-bin #文献管理</span>
-yay -S
+
 wechat-uos scrot <span class="pl-c"><span class="pl-c">#</span>微信客户端，截图</span>
 wireguard-tools <span class="pl-c"><span class="pl-c">#</span>wireguard 配置生成</span>
 
