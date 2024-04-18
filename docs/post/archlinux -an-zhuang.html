@@ -138,7 +138,7 @@ locale
 
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc</pre></div>
-<h2>grub</h2>
+<h2>grub - 系统引导</h2>
 <div class="highlight highlight-source-shell"><pre class="notranslate">grub-install --target=x86_64-efi --bootloader-id=arch --efi-directory=/boot/efi
 grub-mkconfig -o /boot/grub/grub.cfg</pre></div>
 <h2>最后的收尾工作</h2>

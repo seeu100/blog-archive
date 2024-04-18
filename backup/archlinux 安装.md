@@ -86,7 +86,7 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc
 ```
 
-## grub
+## grub - 系统引导
 ```shell
 grub-install --target=x86_64-efi --bootloader-id=arch --efi-directory=/boot/efi
 grub-mkconfig -o /boot/grub/grub.cfg
