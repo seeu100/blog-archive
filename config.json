@@ -10,7 +10,7 @@
     "i18n":"CN",
     "UTC":8,
     "bottomText":"这里才是你的开始",
-    "rssSplit":"$$$$$$$"
+    "rssSplit":"$$$$$$$",
     "commentLabelColor":"#006b75",
-    "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
+    "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"]
 }
