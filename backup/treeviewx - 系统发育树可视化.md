@@ -1,4 +1,3 @@
-
 ![image](https://github.com/seeu100/blog/assets/138188931/8808ddf8-2d6a-47c3-af99-10ad7d640f25)
 
 TreeView X 是一款开源程序，专为Linux、Unix、Mac OS X和Windows操作系统设计，旨在显示和打印系统发育树。这款软件能够读取和显示NEXUS和Newick格式的树状结构文件，这两种格式是由PAUP*、ClustalX、TREE-PUZZLE以及其他相关程序生成的常见系统发育树输出格式。虽然它的功能相对于Mac Classic和Windows版的TreeView有所精简，但大致相当于TreeView的0.95版本水平。
@@ -10,7 +9,6 @@ TreeView X 提供了对系统发育树分支的排序功能，并且支持导出
 
 Source: https://code.google.com/archive/p/treeviewx/
 License: [ GNU GPL v2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
-AUR: https://aur.archlinux.org/packages/treeviewx
 Labels:
 [CPlusPlus](https://code.google.com/archive/search?q=domain:code.google.com%20label:CPlusPlus) [visualisation](https://code.google.com/archive/search?q=domain:code.google.com%20label:visualisation) [phylogeny](https://code.google.com/archive/search?q=domain:code.google.com%20label:phylogeny)
 
@@ -19,7 +17,10 @@ Labels:
 待补充
 ```
 参考[Compiling.wiki](https://code.google.com/archive/p/treeviewx/wikis/Compiling.wiki)
+
 ## ArchLinux AUR编译安装
+
+AUR: https://aur.archlinux.org/packages/treeviewx
 
 ```shell
 # Maintainer: Guoyi Zhang <myname at malacology dot net>
