@@ -1,5 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Fri, 19 Apr 2024 02:18:25 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>Windows Hugo 环境搭建</title><link>https://blog.00002000.xyz/post/32.html</link><description>天啊，我竟然在Windows上尝试搭建开发环境，这话放以前我绝不敢相信。然而，现在啥都看开了~~，区区Windows而已，我还要开始灌水式博客了呢:)&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Fri, 19 Apr 2024 02:50:16 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>ED2K (eDonkey2000)和BT (BitTorrent)</title><link>https://blog.00002000.xyz/post/33.html</link><description>### ED2K (eDonkey2000)&#13;
+&#13;
+eD2k，全称为“eDonkey2000 network”，是一个早期且知名的点对点（P2P）文件共享协议及网络，由美国程序员摩西·加龙（Moses_Galoon）和杰里米·齐默尔曼（Jeremy Zawodny）创建，并随着他们的应用程序eDonkey2000客户端流行起来。这个网络允许用户通过互联网直接从其他用户的计算机上下载或上传数据，尤其适用于分享大型文件，例如音乐、电影、软件、文档等。&#13;
+&#13;
+虽然eDonkey2000客户端不再维护更新，但有许多其他的P2P软件如eMule、aMule等依然支持eD2k协议。&#13;
+&#13;
+### BT (BitTorrent)&#13;
+&#13;
+**BitTorrent (BT)** 是另一种广受欢迎的P2P文件共享协议，由布拉姆·科恩（Bram Cohen）于2001年发明。BT协议的核心特点是通过.torrent文件引导下载，该文件包含了元数据信息，如文件名、大小、哈希值等。不同于ED2K依赖于中央服务器索引或者直接的IP寻址，BT使用分布式哈希表（DHT）技术来定位文件的种子和参与者。&#13;
+&#13;
+用户使用BT下载软件（如uTorrent、BitComet、Transmission等）下载和上传文件。&#13;
+&#13;
+### BT下载软件&#13;
+&#13;
+常见的BT下载软件有：&#13;
+&#13;
+- **uTorrent**: 体积小巧、功能强大的BT客户端，拥有简洁易用的界面和丰富的设置选项。&#13;
+- **BitComet**: 支持HTTP/FTP下载、磁力链接以及BT种子下载，还有缓存、预下载等功能。&#13;
+- **Transmission**: 开源跨平台的轻量级BT客户端，界面简洁，特别受到Linux和Mac OS X用户的喜爱。&#13;
+- **qBittorrent**: 开源的跨平台BT客户端，提供了类似uTorrent的功能，并强调隐私保护和无广告特性。&#13;
+- **迅雷**：国内常用，速度较快，但因只下载不上传被称为“吸血雷”。在P2P网络中，公平性原则通常要求用户在下载的同时上传文件片段给其他用户，以保持网络的活力和整体速度。&#13;
+$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/post/33.html</guid><pubDate>Fri, 19 Apr 2024 02:49:52 +0000</pubDate></item><item><title>Windows Hugo 环境搭建</title><link>https://blog.00002000.xyz/post/32.html</link><description>天啊，我竟然在Windows上尝试搭建开发环境，这话放以前我绝不敢相信。然而，现在啥都看开了~~，区区Windows而已，我还要开始灌水式博客了呢:)&#13;
 &#13;
 ## 安装包管理器Chocolatey&#13;
 &#13;
