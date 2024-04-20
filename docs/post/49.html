@@ -15,7 +15,7 @@ Enforce HTTPS — Unavailable for your site because your domain is not properly 
 HTTPS provides a layer of encryption that prevents others from snooping on or tampering with traffic to your site.
 When HTTPS is enforced, your site will only be served over HTTPS. [Learn more about securing your GitHub Pages site with HTTPS](https://docs.github.com/articles/securing-your-github-pages-site-with-https).
 
-原因：用cloudflare解析DNS记录并开启了代理（proxy），先**取消代理**即可。">
+原因：用cloudflare解析DNS记录并开启了代理（Proxy），先**取消代理**即可。">
 <meta property="og:title" content="Github Page 自定义域名无法开启强制HTTPS">
 <meta property="og:description" content="报错如下：
 Enforce HTTPS — Unavailable for your site because your domain is not properly configured to support HTTPS ([`00002000.xyz`](http://00002000.xyz/)) — [Troubleshooting custom domains](https://docs.github.com/articles/troubleshooting-custom-domains/#https-errors)
@@ -23,7 +23,7 @@ Enforce HTTPS — Unavailable for your site because your domain is not properly 
 HTTPS provides a layer of encryption that prevents others from snooping on or tampering with traffic to your site.
 When HTTPS is enforced, your site will only be served over HTTPS. [Learn more about securing your GitHub Pages site with HTTPS](https://docs.github.com/articles/securing-your-github-pages-site-with-https).
 
-原因：用cloudflare解析DNS记录并开启了代理（proxy），先**取消代理**即可。">
+原因：用cloudflare解析DNS记录并开启了代理（Proxy），先**取消代理**即可。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.00002000.xyz/post/49.html">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg">
@@ -86,7 +86,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 Enforce HTTPS — Unavailable for your site because your domain is not properly configured to support HTTPS (<a href="http://00002000.xyz/" rel="nofollow"><code class="notranslate">00002000.xyz</code></a>) — <a href="https://docs.github.com/articles/troubleshooting-custom-domains/#https-errors">Troubleshooting custom domains</a></p>
 <p>HTTPS provides a layer of encryption that prevents others from snooping on or tampering with traffic to your site.<br>
 When HTTPS is enforced, your site will only be served over HTTPS. <a href="https://docs.github.com/articles/securing-your-github-pages-site-with-https">Learn more about securing your GitHub Pages site with HTTPS</a>.</p>
-<p>原因：用cloudflare解析DNS记录并开启了代理（proxy），先<strong>取消代理</strong>即可。<br>
+<p>原因：用cloudflare解析DNS记录并开启了代理（Proxy），先<strong>取消代理</strong>即可。<br>
 运行命令：<code class="notranslate">dig blog.00002000.xyz +noall +answer -t A</code></p>
 <p>开启代理时：</p>
 <pre class="notranslate"><code class="notranslate">blog.00002000.xyz.      600     IN      A       104.21.82.3
@@ -98,7 +98,17 @@ seeu100.github.io.      3600    IN      A       185.199.108.153
 seeu100.github.io.      3600    IN      A       185.199.109.153
 seeu100.github.io.      3600    IN      A       185.199.110.153
 seeu100.github.io.      3600    IN      A       185.199.111.153
-</code></pre></div>
+</code></pre>
+<p>使用Cloudflare的DNS解析服务时，如果启用了代理，那么原本直接指向GitHub Pages服务器的DNS解析记录将被替换为指向Cloudflare的CDN节点。这样虽然可以实现SSL/TLS加密，但由于Cloudflare与GitHub Pages之间没有建立正确的HTTPS连接配置，可能会导致GitHub Pages无法正确识别并强制启用HTTPS。</p>
+<p>GitHub Pages仅能识别那些直接指向其IP地址或者经过正确CNAME映射的域名，而无法识别通过Cloudflare代理后的DNS记录，因此会出现“Enforce HTTPS — Unavailable for your site”的错误提示。</p>
+<p>总的来说，使用Cloudflare的DNS解析服务时，要使GitHub Pages上的自定义域名支持HTTPS，请按照以下步骤操作：</p>
+<ol>
+<li>登录Cloudflare账户并前往相应域名的DNS设置页面。</li>
+<li>将该域名或子域名的DNS记录从"Proxy (橙色云朵)"模式切换至"DNS only (灰色云朵)"模式，以禁用Cloudflare的代理功能。</li>
+<li>确保CNAME或A记录指向<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https#verifying-the-dns-configuration">GitHub Pages的指定地址</a>。</li>
+<li>在GitHub Pages的设置中添加或确认你的自定义域名，并等待DNS更改在全球范围内传播生效。</li>
+<li>在GitHub Pages中验证并启用HTTPS服务。</li>
+</ol></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
