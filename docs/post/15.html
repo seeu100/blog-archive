@@ -86,13 +86,16 @@ bash-completion #命令参数补全
 ## locale和时间
 
 ```shell
+#locale.gen
 sed -i -e "s/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/" /etc/locale.gen
 sed -i -e "s/^#zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/" /etc/locale.gen
 locale-gen
 
+#locale.conf
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 locale
 
+#时区
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc
 ```
@@ -106,16 +109,14 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ## 最后的收尾工作
 
 ```shell
-systemctl enable dhcpcd iwd
+systemctl enable dhcpcd iwd #联网
 EDITOR=vim visudo #wheel组可以使用sudo
 useradd -m -G wheel newuser #新建用户
 passwd #设置密码
 passwd newuser #设置密码
 ```
 
-接下篇 #16  [archlinux 配置](https://blog.00002000.xyz/post/16.html) 
-
-<!-- ##{"timestamp":1682524800}## -->$$$$$$$">
+接下篇 #16  [archlinux 配置](https://blog.00002000.xyz/post/16.html) $$$$$$$">
 <meta property="og:title" content="archlinux 安装">
 <meta property="og:description" content="## 分区
 
@@ -194,13 +195,16 @@ bash-completion #命令参数补全
 ## locale和时间
 
 ```shell
+#locale.gen
 sed -i -e "s/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/" /etc/locale.gen
 sed -i -e "s/^#zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/" /etc/locale.gen
 locale-gen
 
+#locale.conf
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 locale
 
+#时区
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc
 ```
@@ -214,16 +218,14 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ## 最后的收尾工作
 
 ```shell
-systemctl enable dhcpcd iwd
+systemctl enable dhcpcd iwd #联网
 EDITOR=vim visudo #wheel组可以使用sudo
 useradd -m -G wheel newuser #新建用户
 passwd #设置密码
 passwd newuser #设置密码
 ```
 
-接下篇 #16  [archlinux 配置](https://blog.00002000.xyz/post/16.html) 
-
-<!-- ##{"timestamp":1682524800}## -->$$$$$$$">
+接下篇 #16  [archlinux 配置](https://blog.00002000.xyz/post/16.html) $$$$$$$">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.00002000.xyz/post/15.html">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg">
@@ -346,26 +348,28 @@ grub efibootmgr <span class="pl-c"><span class="pl-c">#</span>引导</span>
 intel-ucode amd-ucode <span class="pl-c"><span class="pl-c">#</span>处理器微码补丁</span>
 bash-completion <span class="pl-c"><span class="pl-c">#</span>命令参数补全</span></pre></div>
 <h2>locale和时间</h2>
-<div class="highlight highlight-source-shell"><pre class="notranslate">sed -i -e <span class="pl-s"><span class="pl-pds">"</span>s/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/<span class="pl-pds">"</span></span> /etc/locale.gen
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span>locale.gen</span>
+sed -i -e <span class="pl-s"><span class="pl-pds">"</span>s/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/<span class="pl-pds">"</span></span> /etc/locale.gen
 sed -i -e <span class="pl-s"><span class="pl-pds">"</span>s/^#zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/<span class="pl-pds">"</span></span> /etc/locale.gen
 locale-gen
 
+<span class="pl-c"><span class="pl-c">#</span>locale.conf</span>
 <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>LANG=en_US.UTF-8<span class="pl-pds">'</span></span> <span class="pl-k">&gt;</span> /etc/locale.conf
 locale
 
+<span class="pl-c"><span class="pl-c">#</span>时区</span>
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc</pre></div>
 <h2>grub - 系统引导</h2>
 <div class="highlight highlight-source-shell"><pre class="notranslate">grub-install --target=x86_64-efi --bootloader-id=arch --efi-directory=/boot/efi
 grub-mkconfig -o /boot/grub/grub.cfg</pre></div>
 <h2>最后的收尾工作</h2>
-<div class="highlight highlight-source-shell"><pre class="notranslate">systemctl <span class="pl-c1">enable</span> dhcpcd iwd
+<div class="highlight highlight-source-shell"><pre class="notranslate">systemctl <span class="pl-c1">enable</span> dhcpcd iwd <span class="pl-c"><span class="pl-c">#</span>联网</span>
 EDITOR=vim visudo <span class="pl-c"><span class="pl-c">#</span>wheel组可以使用sudo</span>
 useradd -m -G wheel newuser <span class="pl-c"><span class="pl-c">#</span>新建用户</span>
 passwd <span class="pl-c"><span class="pl-c">#</span>设置密码</span>
 passwd newuser <span class="pl-c"><span class="pl-c">#</span>设置密码</span></pre></div>
-<p>接下篇 #16  <a href="https://blog.00002000.xyz/post/16.html" rel="nofollow">archlinux 配置</a></p>
-</div>
+<p>接下篇 #16  <a href="https://blog.00002000.xyz/post/16.html" rel="nofollow">archlinux 配置</a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;">这里才是你的开始，<span id="busuanzi">❤️感谢第<span></span>位小伙伴的<span></span>次访问本站。</span></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>

@@ -75,13 +75,16 @@ bash-completion #命令参数补全
 ## locale和时间
 
 ```shell
+#locale.gen
 sed -i -e "s/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/" /etc/locale.gen
 sed -i -e "s/^#zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/" /etc/locale.gen
 locale-gen
 
+#locale.conf
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 locale
 
+#时区
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc
 ```
@@ -95,7 +98,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ## 最后的收尾工作
 
 ```shell
-systemctl enable dhcpcd iwd
+systemctl enable dhcpcd iwd #联网
 EDITOR=vim visudo #wheel组可以使用sudo
 useradd -m -G wheel newuser #新建用户
 passwd #设置密码
@@ -103,5 +106,3 @@ passwd newuser #设置密码
 ```
 
 接下篇 #16  [archlinux 配置](https://blog.00002000.xyz/post/16.html) 
-
-<!-- ##{"timestamp":1682524800}## -->
