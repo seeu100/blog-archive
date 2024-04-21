@@ -11,7 +11,7 @@
 
 我去[AUR - yaourt](https://aur.archlinux.org/packages/yaourt/)看了一下，昨天还有更新呀！这不还在维护吗？
 
-在搜索引擎搜到了这篇文章“[Yaourt 已死！在 Arch 上使用这些替代品](https://zhuanlan.zhihu.com/p/42287487)”，结合ArchWiki里的内容“[AUR helpers (简体中文)](https://wiki.archlinux.org/index.php/AUR_helpers_%28%25E7%25AE%2580%25E4%25BD%2593%25E4%25B8%25AD%25E6%2596%2587%29)和[AUR helpers](https://wiki.archlinux.org/index.php/AUR_helpers%23Comparison_table)”，差别有点大，英文wiki甚至说aurman停止维护了。
+在搜索引擎搜到了这篇文章“[Yaourt 已死！在 Arch 上使用这些替代品](https://zhuanlan.zhihu.com/p/42287487)”，结合ArchWiki里的内容“[AUR helpers (简体中文)](https://wiki.archlinux.org/index.php/AUR_helpers_%28%25E7%25AE%2580%25E4%25BD%2593%25E4%25B8%25AD%25E6%2596%2587%29)和[AUR helpers](https://wiki.archlinux.org/index.php/AUR_helpers%23Comparison_table)”，差别有点大，英文wiki甚至说`aurman`停止维护了。
 
 直接到[GitHub - archlinuxfr/yaourt](https://github.com/archlinuxfr/yaourt)里看，issues堆积了101个之多，最后一次提交已经是去年的事情了。
 
