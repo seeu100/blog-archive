@@ -1,3 +1,8 @@
+[scrcpy](https://github.com/Genymobile/scrcpy) 是一个用于控制和显示 Android 设备的桌面应用程序。它通过 USB（或 Wi-Fi）连接到设备，并在电脑上以高帧率显示设备屏幕，同时支持键盘和鼠标输入控制。
+
+前提：确保设备已开启 **adb 调试**
+
+
 ## scrcpy wifi 无线连接设备
 
 在手机上查看ip地址，，如`192.168.59.249`。

@@ -9,13 +9,9 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="## scrcpy wifi 无线连接设备
-
-在手机上查看ip地址，，如`192.168.59.249`。">
+<meta name="description" content="[scrcpy](https://github.com/Genymobile/scrcpy) 是一个用于控制和显示 Android 设备的桌面应用程序。">
 <meta property="og:title" content="scrcpy">
-<meta property="og:description" content="## scrcpy wifi 无线连接设备
-
-在手机上查看ip地址，，如`192.168.59.249`。">
+<meta property="og:description" content="[scrcpy](https://github.com/Genymobile/scrcpy) 是一个用于控制和显示 Android 设备的桌面应用程序。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.00002000.xyz/post/77.html">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg">
@@ -74,7 +70,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h2>scrcpy wifi 无线连接设备</h2>
+<div class="markdown-body" id="postBody"><p><a href="https://github.com/Genymobile/scrcpy">scrcpy</a> 是一个用于控制和显示 Android 设备的桌面应用程序。它通过 USB（或 Wi-Fi）连接到设备，并在电脑上以高帧率显示设备屏幕，同时支持键盘和鼠标输入控制。</p>
+<p>前提：确保设备已开启 <strong>adb 调试</strong></p>
+<h2>scrcpy wifi 无线连接设备</h2>
 <p>在手机上查看ip地址，，如<code class="notranslate">192.168.59.249</code>。</p>
 <p>然后在电脑中运行：</p>
 <div class="highlight highlight-source-shell"><pre class="notranslate">$ adb tcpip 5555
@@ -510,7 +508,11 @@ console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n\n","padding:5p
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
-
+cmButton=document.getElementById("cmButton");
+    span=document.createElement("span");
+    span.setAttribute("class","Counter");
+    span.innerHTML="1";
+    cmButton.appendChild(span);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
