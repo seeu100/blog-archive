@@ -34,6 +34,18 @@ Shields.io 的 GitHub 徽章主要通过特定的 URL 格式生成，例如 http
 
 这些徽章的 URL 格式可以通过 Shields.io 网站上的搜索栏或分类浏览找到，具体操作是点击徽章预览，填写必要的路径参数（如用户名和存储库名），然后可选地自定义标签、颜色等，最后复制生成的 Markdown 代码。 
 
+## 常见的 AUR 徽章类型
+
+| **徽章名称**         | **描述**                      | **Markdown 示例**                                         |
+| -------------------------- | ----------------------------------- | --------------------------------------------------------------- |
+| AUR 版本         | 显示 AUR 包的当前版本     | ![AUR 版本](https://img.shields.io/aur/version/linuxqq)           |
+| AUR 许可证       | 显示 AUR 包的许可证信息   | ![AUR 许可证](https://img.shields.io/aur/license/linuxqq)         |
+| AUR 最后修改时间 | 显示 AUR 包的最后修改日期 | ![AUR 最后修改](https://img.shields.io/aur/last-modified/linuxqq) |
+| AUR 维护者       | 显示 AUR 包的当前维护者   | ![AUR 维护者](https://img.shields.io/aur/maintainer/linuxqq)      |
+| AUR 投票数       | 显示 AUR 包的投票数量     | ![AUR 投票](https://img.shields.io/aur/votes/linuxqq)             |
+
+- 注意事项：由于 AUR API 有每日 4000 次请求的速率限制，Shields.io 可能会因高流量而偶尔返回 invalid 值。建议合理设置缓存时间（如 cacheSeconds=3600）以减少请求。
+- API来源：https://aur.archlinux.org/rpc/swagger
 
 ## 自定义徽章
 

@@ -160,6 +160,47 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </tbody>
 </table></markdown-accessiblity-table>
 <p>这些徽章的 URL 格式可以通过 Shields.io 网站上的搜索栏或分类浏览找到，具体操作是点击徽章预览，填写必要的路径参数（如用户名和存储库名），然后可选地自定义标签、颜色等，最后复制生成的 Markdown 代码。</p>
+<h2>常见的 AUR 徽章类型</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th><strong>徽章名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>Markdown 示例</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AUR 版本</td>
+<td>显示 AUR 包的当前版本</td>
+<td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/35d394b11139afb817f301d679aa13ed4de3d126e2973ff46936d081874b4979/68747470733a2f2f696d672e736869656c64732e696f2f6175722f76657273696f6e2f6c696e75787171"><img src="https://camo.githubusercontent.com/35d394b11139afb817f301d679aa13ed4de3d126e2973ff46936d081874b4979/68747470733a2f2f696d672e736869656c64732e696f2f6175722f76657273696f6e2f6c696e75787171" alt="AUR 版本" data-canonical-src="https://img.shields.io/aur/version/linuxqq" style="max-width: 100%;"></a></td>
+</tr>
+<tr>
+<td>AUR 许可证</td>
+<td>显示 AUR 包的许可证信息</td>
+<td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/2704d6b3fbcec15cea4a42327f1b293c6f9c6a19e55ac21ad2fc6efd84a36969/68747470733a2f2f696d672e736869656c64732e696f2f6175722f6c6963656e73652f6c696e75787171"><img src="https://camo.githubusercontent.com/2704d6b3fbcec15cea4a42327f1b293c6f9c6a19e55ac21ad2fc6efd84a36969/68747470733a2f2f696d672e736869656c64732e696f2f6175722f6c6963656e73652f6c696e75787171" alt="AUR 许可证" data-canonical-src="https://img.shields.io/aur/license/linuxqq" style="max-width: 100%;"></a></td>
+</tr>
+<tr>
+<td>AUR 最后修改时间</td>
+<td>显示 AUR 包的最后修改日期</td>
+<td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/05d87c71b0ad1907cfd8bbeafac670719a6936e64404d1b26edf9b64cb3bfa79/68747470733a2f2f696d672e736869656c64732e696f2f6175722f6c6173742d6d6f6469666965642f6c696e75787171"><img src="https://camo.githubusercontent.com/05d87c71b0ad1907cfd8bbeafac670719a6936e64404d1b26edf9b64cb3bfa79/68747470733a2f2f696d672e736869656c64732e696f2f6175722f6c6173742d6d6f6469666965642f6c696e75787171" alt="AUR 最后修改" data-canonical-src="https://img.shields.io/aur/last-modified/linuxqq" style="max-width: 100%;"></a></td>
+</tr>
+<tr>
+<td>AUR 维护者</td>
+<td>显示 AUR 包的当前维护者</td>
+<td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9a65e52240cae101aee00ecd1fff7a331bb20ce4bbaee7c0ad0065f08d1c337a/68747470733a2f2f696d672e736869656c64732e696f2f6175722f6d61696e7461696e65722f6c696e75787171"><img src="https://camo.githubusercontent.com/9a65e52240cae101aee00ecd1fff7a331bb20ce4bbaee7c0ad0065f08d1c337a/68747470733a2f2f696d672e736869656c64732e696f2f6175722f6d61696e7461696e65722f6c696e75787171" alt="AUR 维护者" data-canonical-src="https://img.shields.io/aur/maintainer/linuxqq" style="max-width: 100%;"></a></td>
+</tr>
+<tr>
+<td>AUR 投票数</td>
+<td>显示 AUR 包的投票数量</td>
+<td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/1753d54da43b7c61160bd344104fdea65c1739d1480b6f78251b3ef645026481/68747470733a2f2f696d672e736869656c64732e696f2f6175722f766f7465732f6c696e75787171"><img src="https://camo.githubusercontent.com/1753d54da43b7c61160bd344104fdea65c1739d1480b6f78251b3ef645026481/68747470733a2f2f696d672e736869656c64732e696f2f6175722f766f7465732f6c696e75787171" alt="AUR 投票" data-canonical-src="https://img.shields.io/aur/votes/linuxqq" style="max-width: 100%;"></a></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<ul>
+<li>注意事项：由于 AUR API 有每日 4000 次请求的速率限制，Shields.io 可能会因高流量而偶尔返回 invalid 值。建议合理设置缓存时间（如 cacheSeconds=3600）以减少请求。</li>
+<li>API来源：<a href="https://aur.archlinux.org/rpc/swagger" rel="nofollow">https://aur.archlinux.org/rpc/swagger</a></li>
+</ul>
 <h2>自定义徽章</h2>
 <p>Shields.io 允许通过查询参数自定义徽章的外观，例如更改样式、颜色或添加徽标。以下是一些常见自定义选项：</p>
 <ul>
