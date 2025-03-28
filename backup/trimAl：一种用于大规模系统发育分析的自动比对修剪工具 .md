@@ -1,3 +1,10 @@
+| 软件名称 | 简介 | 教程 | 平台(PC) | tags |
+| -------- | ---- | ---- | -------- | ---- |
+| trimAl    | 一种用于大规模系统发育分析的自动比对修剪工具     | #40  | 跨平台   | ![GitHub top language](https://img.shields.io/github/languages/top/inab/trimal) ![GitHub last commit](https://img.shields.io/github/last-commit/inab/trimal) ![GitHub issues](https://img.shields.io/github/issues/inab/trimal) ![GitHub stars](https://img.shields.io/github/stars/inab/trimal?style=flat) ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/inab/trimal) ![GitHub contributors](https://img.shields.io/github/contributors/inab/trimal) ![GitHub Created At](https://img.shields.io/github/created-at/inab/trimal) ![GitHub forks](https://img.shields.io/github/forks/inab/trimal?style=flat) ![GitHub pull requests](https://img.shields.io/github/issues-pr/inab/trimal) ![GitHub license](https://img.shields.io/github/license/inab/trimal) ![GitHub release](https://img.shields.io/github/v/release/inab/trimal) ![GitHub language count](https://img.shields.io/github/languages/count/inab/trimal)     
+
+- [trimAl — trimAl](https://trimal.readthedocs.io/en/latest/)
+- [inab/trimal: A tool for automated alignment trimming in large-scale phylogenetic analyses. Development version: 2.0](https://github.com/inab/trimal)
+
 ## 简介
 
 trimAl，全称为“trimAl”（Trimming Alignment with Logical Constraints），是一款生物信息学软件，专门用于优化多序列比对（Multiple Sequence Alignments，MSA）。它通过智能化筛选和修剪的方法，移除MSA中的低质量区域，包括不可靠的对齐位置和高度变异的序列片段，从而提高系统发育分析和进化分析的质量和可靠性。
