@@ -1,26 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -150 300 300" width="300" height="300">
-  <circle cx="0" cy="0" r="20" fill="orange" stroke="gray" stroke-width="2" />
-  <!-- 中心的“王”字 -->
-  <text x="0" y="10" text-anchor="middle" alignment-baseline="central" font-size="30" fill="white">
-    王
-  </text>
+<svg width="50" height="50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景层 -->
+  <rect width="100%" height="100%" fill="#2B8CF9" rx="20"/>
+  
+  <!-- 动态光环 -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke-width="4">
+    <animate attributeName="stroke-dasharray" values="0,440;220,220;440,0" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="stroke" values="#2B8CF9;#FFFFFF;#2B8CF9" dur="3s" repeatCount="indefinite"/>
+  </circle>
 
-  <!-- 行星轨道线圈 -->
-  <circle cx="0" cy="0" r="100" fill="none" stroke="gray" stroke-width="2" />
-  <circle cx="0" cy="0" r="90" fill="none" stroke="gray" stroke-width="2" />
-  <circle cx="0" cy="0" r="80" fill="none" stroke="gray" stroke-width="2" />
-  <circle cx="0" cy="0" r="70" fill="none" stroke="gray" stroke-width="2" />
-  <circle cx="0" cy="0" r="60" fill="none" stroke="gray" stroke-width="2" />
-  <circle cx="0" cy="0" r="50" fill="none" stroke="gray" stroke-width="2" />
-  <circle cx="0" cy="0" r="40" fill="none" stroke="gray" stroke-width="2" />
-  <circle cx="0" cy="0" r="30" fill="none" stroke="gray" stroke-width="2" />
-  <!-- 模拟环绕太阳运动的行星 -->
-  <circle cx="30" cy="0" r="4" fill="#8B8682" />
-  <circle cx="40" cy="0" r="4" fill="#FFFFCC" />
-  <circle cx="50" cy="0" r="4" fill="#00FFFF" />
-  <circle cx="60" cy="0" r="4" fill="#8B0000" />
-  <circle cx="70" cy="0" r="4" fill="#FDB813" />
-  <circle cx="80" cy="0" r="4" fill="#C2B280" />
-  <circle cx="90" cy="0" r="4" fill="#AAD6E6" />
-  <circle cx="100" cy="0" r="4" fill="#0077BE" />
+  <!-- 核心数字 -->
+  <g transform="translate(100,100)">
+    <text font-size="60" fill="#FFF" text-anchor="middle" dy="20">
+      0
+      <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="1.5s" repeatCount="indefinite"/>
+    </text>
+    
+    <!-- 动态网格 -->
+    <g stroke="#FFF" opacity="0.3">
+      <path d="M-40-40L40 40M40-40L-40 40">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
 </svg>
