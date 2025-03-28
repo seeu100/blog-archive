@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Fri, 28 Mar 2025 13:06:26 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>科研公开数据</title><link>https://blog.00002000.xyz/post/85.html</link><description>**综合性基因组与蛋白质数据库**
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Fri, 28 Mar 2025 13:27:17 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>科研公开数据</title><link>https://blog.00002000.xyz/post/85.html</link><description>**综合性基因组与蛋白质数据库**
 
 1. **NCBI (National Center for Biotechnology Information)**
    * **描述**: 提供基因组序列、蛋白质序列、转录组数据及多种生物学信息，包含GenBank、RefSeq等子数据库。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/85.html</guid><pubDate>Fri, 28 Mar 2025 12:18:30 +0000</pubDate></item><item><title>/etc/machine-id</title><link>https://blog.00002000.xyz/post/84.html</link><description>## `/etc/machine-id` 有什么作用，可以更改吗？&#13;
@@ -147,33 +147,34 @@ Enforce HTTPS — Unavailable for your site because your domain is not properly 
 HTTPS provides a layer of encryption that prevents others from snooping on or tampering with traffic to your site.&#13;
 When HTTPS is enforced, your site will only be served over HTTPS. [Learn more about securing your GitHub Pages site with HTTPS](https://docs.github.com/articles/securing-your-github-pages-site-with-https).&#13;
 &#13;
-原因：用cloudflare解析DNS记录并开启了代理（Proxy），先**取消代理**即可。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/49.html</guid><pubDate>Sat, 20 Apr 2024 07:49:37 +0000</pubDate></item><item><title>mathml和latex互转</title><link>https://blog.00002000.xyz/post/48.html</link><description>MathML (Mathematical Markup Language) 和 LaTeX 是两种广泛用于表示数学公式的标准语言。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/48.html</guid><pubDate>Sat, 20 Apr 2024 04:51:30 +0000</pubDate></item><item><title>MIKE：一种用于构建系统发育树的超快、无组装和无干扰方法</title><link>https://blog.00002000.xyz/post/47.html</link><description>```bibtex&#13;
-@article{10.1093/bioinformatics/btae154,&#13;
-    author = {Wang, Fang and Wang, Yibin and Zeng, Xiaofei and Zhang, Shengcheng and Yu, Jiaxin and Li, Dongxi and Zhang, Xingtan},&#13;
-    title = '{MIKE: an ultrafast, assembly-, and alignment-free approach for phylogenetic tree construction}',&#13;
-    journal = {Bioinformatics},&#13;
-    volume = {40},&#13;
-    number = {4},&#13;
-    pages = {btae154},&#13;
-    year = {2024},&#13;
-    month = {03},&#13;
-    abstract = '{Constructing a phylogenetic tree requires calculating the evolutionary distance between samples or species via large-scale resequencing data, a process that is both time-consuming and computationally demanding. Striking the right balance between accuracy and efficiency is a significant challenge.To address this, we introduce a new algorithm, MIKE (MinHash-based k-mer algorithm). This algorithm is designed for the swift calculation of the Jaccard coefficient directly from raw sequencing reads and enables the construction of phylogenetic trees based on the resultant Jaccard coefficient. Simulation results highlight the superior speed of MIKE compared to existing state-of-the-art methods. We used MIKE to reconstruct a phylogenetic tree, incorporating 238 yeast, 303 Zea, 141 Ficus, 67 Oryza, and 43 Saccharum spontaneum samples. MIKE demonstrated accurate performance across varying evolutionary scales, reproductive modes, and ploidy levels, proving itself as a powerful tool for phylogenetic tree construction.MIKE is publicly available on Github at https://github.com/Argonum-Clever2/mike.git.}',&#13;
-    issn = {1367-4811},&#13;
-    doi = {10.1093/bioinformatics/btae154},&#13;
-    url = {https://doi.org/10.1093/bioinformatics/btae154},&#13;
-    eprint = {https://academic.oup.com/bioinformatics/article-pdf/40/4/btae154/57149237/btae154.pdf},&#13;
-}&#13;
-```&#13;
-&#13;
-&#13;
-&#13;
-```math&#13;
-J\left( {S_{1},\, S_{2}} \right) = \frac{\left| S_{1} \cap S_{2} \right|}{\left. \left| S \right._{1} \cup S_{2} \right|}&#13;
-```&#13;
-&#13;
-&#13;
-[MIKE: an ultrafast, assembly-, and alignment-free approach for phylogenetic tree construction | Bioinformatics | Oxford Academic](https://academic.oup.com/bioinformatics/article/40/4/btae154/7636962)&#13;
-[Mike试用-免组装、免比对，快速从fastq到nwk - 哔哩哔哩](https://www.bilibili.com/read/cv33571829/?spm_id_from=333.999.0.0)。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/47.html</guid><pubDate>Sat, 20 Apr 2024 04:07:42 +0000</pubDate></item><item><title>好看的颜色</title><link>https://blog.00002000.xyz/post/46.html</link><description>| 颜色 | RGB | 十六进制 |&#13;
+原因：用cloudflare解析DNS记录并开启了代理（Proxy），先**取消代理**即可。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/49.html</guid><pubDate>Sat, 20 Apr 2024 07:49:37 +0000</pubDate></item><item><title>mathml和latex互转</title><link>https://blog.00002000.xyz/post/48.html</link><description>MathML (Mathematical Markup Language) 和 LaTeX 是两种广泛用于表示数学公式的标准语言。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/48.html</guid><pubDate>Sat, 20 Apr 2024 04:51:30 +0000</pubDate></item><item><title>MIKE：一种用于构建系统发育树的超快、无组装和无干扰方法</title><link>https://blog.00002000.xyz/post/47.html</link><description>```bibtex
+@article{10.1093/bioinformatics/btae154,
+    author = {Wang, Fang and Wang, Yibin and Zeng, Xiaofei and Zhang, Shengcheng and Yu, Jiaxin and Li, Dongxi and Zhang, Xingtan},
+    title = '{MIKE: an ultrafast, assembly-, and alignment-free approach for phylogenetic tree construction}',
+    journal = {Bioinformatics},
+    volume = {40},
+    number = {4},
+    pages = {btae154},
+    year = {2024},
+    month = {03},
+    abstract = '{Constructing a phylogenetic tree requires calculating the evolutionary distance between samples or species via large-scale resequencing data, a process that is both time-consuming and computationally demanding. Striking the right balance between accuracy and efficiency is a significant challenge.To address this, we introduce a new algorithm, MIKE (MinHash-based k-mer algorithm). This algorithm is designed for the swift calculation of the Jaccard coefficient directly from raw sequencing reads and enables the construction of phylogenetic trees based on the resultant Jaccard coefficient. Simulation results highlight the superior speed of MIKE compared to existing state-of-the-art methods. We used MIKE to reconstruct a phylogenetic tree, incorporating 238 yeast, 303 Zea, 141 Ficus, 67 Oryza, and 43 Saccharum spontaneum samples. MIKE demonstrated accurate performance across varying evolutionary scales, reproductive modes, and ploidy levels, proving itself as a powerful tool for phylogenetic tree construction.MIKE is publicly available on Github at https://github.com/Argonum-Clever2/mike.git.}',
+    issn = {1367-4811},
+    doi = {10.1093/bioinformatics/btae154},
+    url = {https://doi.org/10.1093/bioinformatics/btae154},
+    eprint = {https://academic.oup.com/bioinformatics/article-pdf/40/4/btae154/57149237/btae154.pdf},
+}
+```
+
+
+
+```math
+J\left( {S_{1},\, S_{2}} \right) = \frac{\left| S_{1} \cap S_{2} \right|}{\left. \left| S \right._{1} \cup S_{2} \right|}
+```
+
+
+- [MIKE: an ultrafast, assembly-, and alignment-free approach for phylogenetic tree construction | Bioinformatics | Oxford Academic](https://academic.oup.com/bioinformatics/article/40/4/btae154/7636962)
+- [Mike试用-免组装、免比对，快速从fastq到nwk - 哔哩哔哩](https://www.bilibili.com/read/cv33571829/?spm_id_from=333.999.0.0)
+- [Argonum-Clever2/mike](https://github.com/Argonum-Clever2/mike)。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/47.html</guid><pubDate>Sat, 20 Apr 2024 04:07:42 +0000</pubDate></item><item><title>好看的颜色</title><link>https://blog.00002000.xyz/post/46.html</link><description>| 颜色 | RGB | 十六进制 |&#13;
 | --- | --- | --- |&#13;
 | 豆沙绿 | `#C7EDCC` | (199, 237, 204) |&#13;
 | 银河白 | `#FFFFFF` | (255, 255, 255) |&#13;
