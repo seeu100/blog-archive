@@ -36,13 +36,13 @@ Shields.io 的 GitHub 徽章主要通过特定的 URL 格式生成，例如 http
 Shields.io 允许通过查询参数自定义徽章的外观，例如更改样式、颜色或添加徽标。以下是一些常见自定义选项：
 
 * 样式：可选择 flat、plastic、flat-square、for-the-badge 或 social。
-  示例：`?style=flat-square` ![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=flat-square) 
+  示例：`?style=for-the-badge` ![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=for-the-badge) 
 
 * 颜色：可以指定徽章的颜色，例如 green 或 blue。
   示例：`?style=flat-square&color=green` ![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=flat-square&color=green)
 
 * 徽标：可以添加徽标，例如 GitHub 的徽标。
-  示例：`?style=flat-square&color=green&logo=github` ![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=flat-square&color=green&logo=github)
+  示例：`?style=plastic&color=red&logo=github` ![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=plastic&color=red&logo=github)
 
 * 缓存时间：通过 cacheSeconds 参数设置 HTTP 缓存时间，默认值根据徽章类型推断，低于默认值的设置会被忽略。
   示例：`![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?cacheSeconds=3600)`
