@@ -10,115 +10,153 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="接上篇 #15  [archlinux 安装](https://blog.00002000.xyz/post/15.html) 
+<meta name="description" content="## 一、核心就业方向分析
+### 1. 科研创新领域
+- **药用植物基因组研究**：在科研院所开展中药资源基因组测序与功能解析，结合植物分类学构建道地药材遗传图谱
+- **中药数字化平台开发**：参与中药资源数据库建设，开发物种智能鉴定系统
 
-### 配置镜像
-```shell
-echo 'Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
-```
-### 配置缓存策略，仅保存当前包版本
-```shell
-sed -i -e 's/^#CleanMethod = KeepInstalled/CleanMethod = KeepCurrent/' /etc/pacman.conf
-```
-### 初始化 keyring，这是关键安全配置
+### 2. 制药产业方向
+- **智能中药研发**：
+  - 运用生物信息学进行活性成分虚拟筛选
+  - 开发植物代谢组学数据分析工具
+  - 优化药材基源鉴定流程（需植物分类学知识）
+- **药品质量控制**：建立中药指纹图谱智能分析系统
 
-https://wiki.archlinux.org/title/Pacman/Package_signing
+### 3. 检测认证机构
+- **第三方生物检测**：
+  - 药用植物DNA测序数据分析
+  - 开发中药材溯源技术
+- **标准化制定**：参与中药鉴定行业标准制定
 
-```shell
-pacman-key --init && pacman-key --populate
-pacman -Sy archlinux-keyring && pacman -Su
-```
-## Arch Linux CN / Bioarchlinux 源
-```shell
-sudo vim /etc/pacman.conf 
-# 添加下列内容
-[archlinuxcn]
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
-
-[bioarchlinux]
-# China
-# ## ISCAS
-Server = https://mirror.iscas.ac.cn/BioArchLinux/$arch
-# ## Nanjing University
-Server = https://mirror.nju.edu.cn/bioarchlinux/$arch
-# ## Nanjing University of Posts and Telecommunications
-# Server = http://mirrors.njupt.edu.cn/bioarchlinux/$arch
-Server = https://mirrors.njupt.edu.cn/bioarchlinux/$arch
-# ## Shandong University
-# Server = http://mirrors.sdu.edu.cn/bioarchlinux/$arch
-Server = https://mirrors.sdu.edu.cn/bioarchlinux/$arch
-Server = https://repo.bioarchlinux.org/$arch
-
-# 手动信任bioarchlinux key
-sudo pacman-key --recv-keys B1F96021DB62254D
-sudo pacman-key --finger B1F96021DB62254D
-sudo pacman-key --lsign-key B1F96021DB62254D
-
-# 手动信任archlinuxcn key (临时)
-sudo pacman-key --lsign-key 'farseerfc@archlinux.org'
-
-# 安装keyring包
-sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring  bioarchlinux-keyring && sudo pacman -S paru #AUR安装器
+## 二、交叉领域发展机遇
+```mermaid
+graph LR
+    A[植物分类学] --> B(中药材资源普查)
+    A --> C(濒危物种保护)
+    D[生物信息学] --> E(基因组数据分析)
+    D --> F(智能鉴定算法开发)
+    B & E --> G[中药资源数字化]
+    C & F --> H[道地药材认证体系]
 ```
 
-<!-- ##{'timestamp':1682524800}## -->。">
-<meta property="og:title" content="archlinux 配置">
-<meta property="og:description" content="接上篇 #15  [archlinux 安装](https://blog.00002000.xyz/post/15.html) 
+## 三、竞争力提升策略
 
-### 配置镜像
-```shell
-echo 'Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
+1. **技术能力拓展** ：
+
+* 掌握Python/R语言及生物信息学工具链
+* 学习AI辅助药物发现技术
+
+1. **资质认证建议** ：
+
+* 考取执业药师资格
+* 获取GLP/GCP认证
+
+1. **实践方向选择** ：
+
+* 参与组学数据库建设项目
+* 开发药用植物分类算法模型
+
+## 四、薪酬参考（2025年数据）
+
+| 岗位类型     | 初级(0-2年) | 中级(3-5年)        |
+| ------------ | ----------- | ------------------ |
+| 科研机构     | 6-9k/月     | 10-15k/月+项目奖励 |
+| 药企研发岗   | 8-12k/月    | 15-25k/月          |
+| 检测服务机构 | 7-10k/月    | 12-18k/月+绩效     |
+
+## 五、决策路径建议
+
+1. **科研倾向** ：
+
+* 选择高校/研究所（建议继续深造）
+* 参与国家重点研发计划项目
+
+1. **产业倾向** ：
+
+* 技术研发→选择药企生物信息部
+* 应用服务→检测机构技术顾问
+
+1. **新兴领域** ：
+
+* 中药材区块链溯源系统开发
+* 濒危药用植物基因库建设
+。">
+<meta property="og:title" content="中药学+生物信息学复合背景择业建议">
+<meta property="og:description" content="## 一、核心就业方向分析
+### 1. 科研创新领域
+- **药用植物基因组研究**：在科研院所开展中药资源基因组测序与功能解析，结合植物分类学构建道地药材遗传图谱
+- **中药数字化平台开发**：参与中药资源数据库建设，开发物种智能鉴定系统
+
+### 2. 制药产业方向
+- **智能中药研发**：
+  - 运用生物信息学进行活性成分虚拟筛选
+  - 开发植物代谢组学数据分析工具
+  - 优化药材基源鉴定流程（需植物分类学知识）
+- **药品质量控制**：建立中药指纹图谱智能分析系统
+
+### 3. 检测认证机构
+- **第三方生物检测**：
+  - 药用植物DNA测序数据分析
+  - 开发中药材溯源技术
+- **标准化制定**：参与中药鉴定行业标准制定
+
+## 二、交叉领域发展机遇
+```mermaid
+graph LR
+    A[植物分类学] --> B(中药材资源普查)
+    A --> C(濒危物种保护)
+    D[生物信息学] --> E(基因组数据分析)
+    D --> F(智能鉴定算法开发)
+    B & E --> G[中药资源数字化]
+    C & F --> H[道地药材认证体系]
 ```
-### 配置缓存策略，仅保存当前包版本
-```shell
-sed -i -e 's/^#CleanMethod = KeepInstalled/CleanMethod = KeepCurrent/' /etc/pacman.conf
-```
-### 初始化 keyring，这是关键安全配置
 
-https://wiki.archlinux.org/title/Pacman/Package_signing
+## 三、竞争力提升策略
 
-```shell
-pacman-key --init && pacman-key --populate
-pacman -Sy archlinux-keyring && pacman -Su
-```
-## Arch Linux CN / Bioarchlinux 源
-```shell
-sudo vim /etc/pacman.conf 
-# 添加下列内容
-[archlinuxcn]
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+1. **技术能力拓展** ：
 
-[bioarchlinux]
-# China
-# ## ISCAS
-Server = https://mirror.iscas.ac.cn/BioArchLinux/$arch
-# ## Nanjing University
-Server = https://mirror.nju.edu.cn/bioarchlinux/$arch
-# ## Nanjing University of Posts and Telecommunications
-# Server = http://mirrors.njupt.edu.cn/bioarchlinux/$arch
-Server = https://mirrors.njupt.edu.cn/bioarchlinux/$arch
-# ## Shandong University
-# Server = http://mirrors.sdu.edu.cn/bioarchlinux/$arch
-Server = https://mirrors.sdu.edu.cn/bioarchlinux/$arch
-Server = https://repo.bioarchlinux.org/$arch
+* 掌握Python/R语言及生物信息学工具链
+* 学习AI辅助药物发现技术
 
-# 手动信任bioarchlinux key
-sudo pacman-key --recv-keys B1F96021DB62254D
-sudo pacman-key --finger B1F96021DB62254D
-sudo pacman-key --lsign-key B1F96021DB62254D
+1. **资质认证建议** ：
 
-# 手动信任archlinuxcn key (临时)
-sudo pacman-key --lsign-key 'farseerfc@archlinux.org'
+* 考取执业药师资格
+* 获取GLP/GCP认证
 
-# 安装keyring包
-sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring  bioarchlinux-keyring && sudo pacman -S paru #AUR安装器
-```
+1. **实践方向选择** ：
 
-<!-- ##{'timestamp':1682524800}## -->。">
+* 参与组学数据库建设项目
+* 开发药用植物分类算法模型
+
+## 四、薪酬参考（2025年数据）
+
+| 岗位类型     | 初级(0-2年) | 中级(3-5年)        |
+| ------------ | ----------- | ------------------ |
+| 科研机构     | 6-9k/月     | 10-15k/月+项目奖励 |
+| 药企研发岗   | 8-12k/月    | 15-25k/月          |
+| 检测服务机构 | 7-10k/月    | 12-18k/月+绩效     |
+
+## 五、决策路径建议
+
+1. **科研倾向** ：
+
+* 选择高校/研究所（建议继续深造）
+* 参与国家重点研发计划项目
+
+1. **产业倾向** ：
+
+* 技术研发→选择药企生物信息部
+* 应用服务→检测机构技术顾问
+
+1. **新兴领域** ：
+
+* 中药材区块链溯源系统开发
+* 濒危药用植物基因库建设
+。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.00002000.xyz/post/16.html">
+<meta property="og:url" content="https://blog.00002000.xyz/post/70.html">
 <meta property="og:image" content="https://blog.00002000.xyz/logo.svg">
-<title>archlinux 配置</title>
+<title>中药学+生物信息学复合背景择业建议</title>
 <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
@@ -161,7 +199,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">archlinux 配置</h1>
+<h1 class="postTitle">中药学+生物信息学复合背景择业建议</h1>
 <div class="title-right">
     <a href="https://blog.00002000.xyz" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -169,7 +207,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/seeu100/blog/issues/16" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/seeu100/blog/issues/70" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -185,46 +223,112 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>接上篇 #15  <a href="https://blog.00002000.xyz/post/15.html" rel="nofollow">archlinux 安装</a></p>
-<h3>配置镜像</h3>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch<span class="pl-pds">'</span></span> <span class="pl-k">&gt;</span> /etc/pacman.d/mirrorlist</pre></div>
-<h3>配置缓存策略，仅保存当前包版本</h3>
-<div class="highlight highlight-source-shell"><pre class="notranslate">sed -i -e <span class="pl-s"><span class="pl-pds">"</span>s/^#CleanMethod = KeepInstalled/CleanMethod = KeepCurrent/<span class="pl-pds">"</span></span> /etc/pacman.conf</pre></div>
-<h3>初始化 keyring，这是关键安全配置</h3>
-<p><a href="https://wiki.archlinux.org/title/Pacman/Package_signing" rel="nofollow">https://wiki.archlinux.org/title/Pacman/Package_signing</a></p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">pacman-key --init <span class="pl-k">&amp;&amp;</span> pacman-key --populate
-pacman -Sy archlinux-keyring <span class="pl-k">&amp;&amp;</span> pacman -Su</pre></div>
-<h2>Arch Linux CN / Bioarchlinux 源</h2>
-<div class="highlight highlight-source-shell"><pre class="notranslate">sudo vim /etc/pacman.conf 
-<span class="pl-c"><span class="pl-c">#</span> 添加下列内容</span>
-[archlinuxcn]
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/<span class="pl-smi">$arch</span>
-
-[bioarchlinux]
-<span class="pl-c"><span class="pl-c">#</span> China</span>
-<span class="pl-c"><span class="pl-c">#</span> ## ISCAS</span>
-Server = https://mirror.iscas.ac.cn/BioArchLinux/<span class="pl-smi">$arch</span>
-<span class="pl-c"><span class="pl-c">#</span> ## Nanjing University</span>
-Server = https://mirror.nju.edu.cn/bioarchlinux/<span class="pl-smi">$arch</span>
-<span class="pl-c"><span class="pl-c">#</span> ## Nanjing University of Posts and Telecommunications</span>
-<span class="pl-c"><span class="pl-c">#</span> Server = http://mirrors.njupt.edu.cn/bioarchlinux/$arch</span>
-Server = https://mirrors.njupt.edu.cn/bioarchlinux/<span class="pl-smi">$arch</span>
-<span class="pl-c"><span class="pl-c">#</span> ## Shandong University</span>
-<span class="pl-c"><span class="pl-c">#</span> Server = http://mirrors.sdu.edu.cn/bioarchlinux/$arch</span>
-Server = https://mirrors.sdu.edu.cn/bioarchlinux/<span class="pl-smi">$arch</span>
-Server = https://repo.bioarchlinux.org/<span class="pl-smi">$arch</span>
-
-<span class="pl-c"><span class="pl-c">#</span> 手动信任bioarchlinux key</span>
-sudo pacman-key --recv-keys B1F96021DB62254D
-sudo pacman-key --finger B1F96021DB62254D
-sudo pacman-key --lsign-key B1F96021DB62254D
-
-<span class="pl-c"><span class="pl-c">#</span> 手动信任archlinuxcn key (临时)</span>
-sudo pacman-key --lsign-key <span class="pl-s"><span class="pl-pds">"</span>farseerfc@archlinux.org<span class="pl-pds">"</span></span>
-
-<span class="pl-c"><span class="pl-c">#</span> 安装keyring包</span>
-sudo pacman -Sy <span class="pl-k">&amp;&amp;</span> sudo pacman -S archlinuxcn-keyring  bioarchlinux-keyring <span class="pl-k">&amp;&amp;</span> sudo pacman -S paru <span class="pl-c"><span class="pl-c">#</span>AUR安装器</span></pre></div>
-</div>
+<div class="markdown-body" id="postBody"><h2>一、核心就业方向分析</h2>
+<h3>1. 科研创新领域</h3>
+<ul>
+<li><strong>药用植物基因组研究</strong>：在科研院所开展中药资源基因组测序与功能解析，结合植物分类学构建道地药材遗传图谱</li>
+<li><strong>中药数字化平台开发</strong>：参与中药资源数据库建设，开发物种智能鉴定系统</li>
+</ul>
+<h3>2. 制药产业方向</h3>
+<ul>
+<li><strong>智能中药研发</strong>：
+<ul>
+<li>运用生物信息学进行活性成分虚拟筛选</li>
+<li>开发植物代谢组学数据分析工具</li>
+<li>优化药材基源鉴定流程（需植物分类学知识）</li>
+</ul>
+</li>
+<li><strong>药品质量控制</strong>：建立中药指纹图谱智能分析系统</li>
+</ul>
+<h3>3. 检测认证机构</h3>
+<ul>
+<li><strong>第三方生物检测</strong>：
+<ul>
+<li>药用植物DNA测序数据分析</li>
+<li>开发中药材溯源技术</li>
+</ul>
+</li>
+<li><strong>标准化制定</strong>：参与中药鉴定行业标准制定</li>
+</ul>
+<h2>二、交叉领域发展机遇</h2>
+<div class="highlight highlight-source-mermaid"><pre class="notranslate"><span class="pl-k">graph</span> <span class="pl-c1">LR</span>
+    <span class="pl-ent">A</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>植物分类学<span class="pl-pds"><span class="pl-sg">]</span></span></span> <span class="pl-k">--&gt;</span> <span class="pl-ent">B</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">(</span></span>中药材资源普查<span class="pl-pds"><span class="pl-sg">)</span></span></span>
+    <span class="pl-ent">A</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">C</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">(</span></span>濒危物种保护<span class="pl-pds"><span class="pl-sg">)</span></span></span>
+    <span class="pl-ent">D</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>生物信息学<span class="pl-pds"><span class="pl-sg">]</span></span></span> <span class="pl-k">--&gt;</span> <span class="pl-ent">E</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">(</span></span>基因组数据分析<span class="pl-pds"><span class="pl-sg">)</span></span></span>
+    <span class="pl-ent">D</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">F</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">(</span></span>智能鉴定算法开发<span class="pl-pds"><span class="pl-sg">)</span></span></span>
+    <span class="pl-ent">B</span> <span class="pl-k">&amp;</span> <span class="pl-ent">E</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">G</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>中药资源数字化<span class="pl-pds"><span class="pl-sg">]</span></span></span>
+    <span class="pl-ent">C</span> <span class="pl-k">&amp;</span> <span class="pl-ent">F</span> <span class="pl-k">--&gt;</span> <span class="pl-ent">H</span><span class="pl-s"><span class="pl-pds"><span class="pl-sg">[</span></span>道地药材认证体系<span class="pl-pds"><span class="pl-sg">]</span></span></span></pre></div>
+<h2>三、竞争力提升策略</h2>
+<ol>
+<li><strong>技术能力拓展</strong> ：</li>
+</ol>
+<ul>
+<li>掌握Python/R语言及生物信息学工具链</li>
+<li>学习AI辅助药物发现技术</li>
+</ul>
+<ol>
+<li><strong>资质认证建议</strong> ：</li>
+</ol>
+<ul>
+<li>考取执业药师资格</li>
+<li>获取GLP/GCP认证</li>
+</ul>
+<ol>
+<li><strong>实践方向选择</strong> ：</li>
+</ol>
+<ul>
+<li>参与组学数据库建设项目</li>
+<li>开发药用植物分类算法模型</li>
+</ul>
+<h2>四、薪酬参考（2025年数据）</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>岗位类型</th>
+<th>初级(0-2年)</th>
+<th>中级(3-5年)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>科研机构</td>
+<td>6-9k/月</td>
+<td>10-15k/月+项目奖励</td>
+</tr>
+<tr>
+<td>药企研发岗</td>
+<td>8-12k/月</td>
+<td>15-25k/月</td>
+</tr>
+<tr>
+<td>检测服务机构</td>
+<td>7-10k/月</td>
+<td>12-18k/月+绩效</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2>五、决策路径建议</h2>
+<ol>
+<li><strong>科研倾向</strong> ：</li>
+</ol>
+<ul>
+<li>选择高校/研究所（建议继续深造）</li>
+<li>参与国家重点研发计划项目</li>
+</ul>
+<ol>
+<li><strong>产业倾向</strong> ：</li>
+</ol>
+<ul>
+<li>技术研发→选择药企生物信息部</li>
+<li>应用服务→检测机构技术顾问</li>
+</ul>
+<ol>
+<li><strong>新兴领域</strong> ：</li>
+</ol>
+<ul>
+<li>中药材区块链溯源系统开发</li>
+<li>濒危药用植物基因库建设</li>
+</ul></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -301,7 +405,11 @@ console.log("\n %c Gmeek main https://github.com/Meekdai/Gmeek \n","padding:5px 
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
-
+cmButton=document.getElementById("cmButton");
+    span=document.createElement("span");
+    span.setAttribute("class","Counter");
+    span.innerHTML="1";
+    cmButton.appendChild(span);
 
 
 function openComments(){
