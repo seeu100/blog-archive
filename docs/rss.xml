@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Sat, 29 Mar 2025 02:07:55 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>生物信息软件汇总</title><link>https://blog.00002000.xyz/post/87.html</link><description>| 软件名称  | 简介                                             | 教程 | 平台(PC) | tags                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Sat, 29 Mar 2025 02:10:52 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>生物信息软件汇总</title><link>https://blog.00002000.xyz/post/87.html</link><description>| 软件名称  | 简介                                             | 教程 | 平台(PC) | tags                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | --------- | ------------------------------------------------ | ---- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | trimAl    | 大规模系统发育分析的自动比对修剪工具     | #40  | 跨平台(AUR)   | ![GitHub top language](https://img.shields.io/github/languages/top/inab/trimal) ![GitHub last commit](https://img.shields.io/github/last-commit/inab/trimal) ![GitHub issues](https://img.shields.io/github/issues/inab/trimal) ![GitHub stars](https://img.shields.io/github/stars/inab/trimal?style=flat) ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/inab/trimal) ![GitHub contributors](https://img.shields.io/github/contributors/inab/trimal) ![GitHub Created At](https://img.shields.io/github/created-at/inab/trimal) ![GitHub forks](https://img.shields.io/github/forks/inab/trimal?style=flat) ![GitHub pull requests](https://img.shields.io/github/issues-pr/inab/trimal) ![GitHub license](https://img.shields.io/github/license/inab/trimal) ![GitHub release](https://img.shields.io/github/v/release/inab/trimal) ![GitHub language count](https://img.shields.io/github/languages/count/inab/trimal)                                                                                                             |
 | MIKE      | 构建系统发育树的超快、无组装和无干扰方法 | #47  | 跨平台   | ![GitHub top language](https://img.shields.io/github/languages/top/Argonum-Clever2/mike) ![GitHub last commit](https://img.shields.io/github/last-commit/Argonum-Clever2/mike) ![GitHub issues](https://img.shields.io/github/issues/Argonum-Clever2/mike) ![GitHub stars](https://img.shields.io/github/stars/Argonum-Clever2/mike?style=flat) ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/Argonum-Clever2/mike) ![GitHub contributors](https://img.shields.io/github/contributors/Argonum-Clever2/mike) ![GitHub Created At](https://img.shields.io/github/created-at/Argonum-Clever2/mike) ![GitHub forks](https://img.shields.io/github/forks/Argonum-Clever2/mike?style=flat) ![GitHub pull requests](https://img.shields.io/github/issues-pr/Argonum-Clever2/mike) ![GitHub license](https://img.shields.io/github/license/Argonum-Clever2/mike) ![GitHub release](https://img.shields.io/github/v/release/Argonum-Clever2/mike) ![GitHub language count](https://img.shields.io/github/languages/count/Argonum-Clever2/mike) |
@@ -749,7 +749,58 @@ systemctl hibernate #休眠&#13;
 ## 2023&#13;
 * 重新整理博客并上线 blog.00002000.xyz&#13;
 ## 2024&#13;
-* 博客迁移到 Github issues。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/24.html</guid><pubDate>Thu, 18 Apr 2024 15:01:06 +0000</pubDate></item><item><title>一只特立独行的猪 - 王小波</title><link>https://blog.00002000.xyz/post/22.html</link><description>插队的时候，我喂过猪、也放过牛。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/22.html</guid><pubDate>Thu, 18 Apr 2024 12:22:37 +0000</pubDate></item><item><title>archlinux 安装</title><link>https://blog.00002000.xyz/post/15.html</link><description>## 分区
+* 博客迁移到 Github issues。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/24.html</guid><pubDate>Thu, 18 Apr 2024 15:01:06 +0000</pubDate></item><item><title>一只特立独行的猪 - 王小波</title><link>https://blog.00002000.xyz/post/22.html</link><description>插队的时候，我喂过猪、也放过牛。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/22.html</guid><pubDate>Thu, 18 Apr 2024 12:22:37 +0000</pubDate></item><item><title>archlinux 配置</title><link>https://blog.00002000.xyz/post/16.html</link><description>接上篇 #15  [archlinux 安装](https://blog.00002000.xyz/post/15.html) 
+
+### 配置`/etc/pacman.conf`
+```shell
+echo 'Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' &gt; /etc/pacman.d/mirrorlist
+```
+### 配置缓存策略，仅保存当前包版本
+```shell
+sed -i -e 's/^#CleanMethod = KeepInstalled/CleanMethod = KeepCurrent/' /etc/pacman.conf
+```
+### 初始化 keyring，这是关键安全配置
+
+https://wiki.archlinux.org/title/Pacman/Package_signing
+
+```shell
+pacman-key --init &amp;&amp; pacman-key --populate
+pacman -Sy archlinux-keyring &amp;&amp; pacman -Su
+```
+## Arch Linux CN / Bioarchlinux 源
+```shell
+sudo vim /etc/pacman.conf 
+# 添加下列内容
+[archlinuxcn]
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+
+[bioarchlinux]
+# China
+# ## ISCAS
+Server = https://mirror.iscas.ac.cn/BioArchLinux/$arch
+# ## Nanjing University
+Server = https://mirror.nju.edu.cn/bioarchlinux/$arch
+# ## Nanjing University of Posts and Telecommunications
+# Server = http://mirrors.njupt.edu.cn/bioarchlinux/$arch
+Server = https://mirrors.njupt.edu.cn/bioarchlinux/$arch
+# ## Shandong University
+# Server = http://mirrors.sdu.edu.cn/bioarchlinux/$arch
+Server = https://mirrors.sdu.edu.cn/bioarchlinux/$arch
+Server = https://repo.bioarchlinux.org/$arch
+
+# 手动信任bioarchlinux key
+sudo pacman-key --recv-keys B1F96021DB62254D
+sudo pacman-key --finger B1F96021DB62254D
+sudo pacman-key --lsign-key B1F96021DB62254D
+
+# 手动信任archlinuxcn key (临时)
+sudo pacman-key --lsign-key 'farseerfc@archlinux.org'
+
+# 安装keyring包
+sudo pacman -Sy &amp;&amp; sudo pacman -S archlinuxcn-keyring  bioarchlinux-keyring &amp;&amp; sudo pacman -S paru #AUR安装器
+```
+
+&lt;!-- ##{'timestamp':1682524800}## --&gt;。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/16.html</guid><pubDate>Thu, 18 Apr 2024 11:34:02 +0000</pubDate></item><item><title>archlinux 安装</title><link>https://blog.00002000.xyz/post/15.html</link><description>## 分区
 
 ```shell
 lsblk # 查看硬盘编号
@@ -959,58 +1010,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg&#13;
 SYNC_USER1=username:password SYNC_PORT=8080 anki --syncserver&#13;
 ```&#13;
 1. `SYNC_USER1=username:password`&#13;
-   - 这个环境变量指定的是Anki同步服务器的一个用户凭证，其中`username`是用户名，`password`是对应用户的密码。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/14.html</guid><pubDate>Fri, 07 Jul 2023 16:00:00 +0000</pubDate></item><item><title>archlinux 配置</title><link>https://blog.00002000.xyz/post/16.html</link><description>接上篇 #15  [archlinux 安装](https://blog.00002000.xyz/post/15.html) &#13;
-&#13;
-### 配置镜像&#13;
-```shell&#13;
-echo 'Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' &gt; /etc/pacman.d/mirrorlist&#13;
-```&#13;
-### 配置缓存策略，仅保存当前包版本&#13;
-```shell&#13;
-sed -i -e 's/^#CleanMethod = KeepInstalled/CleanMethod = KeepCurrent/' /etc/pacman.conf&#13;
-```&#13;
-### 初始化 keyring，这是关键安全配置&#13;
-&#13;
-https://wiki.archlinux.org/title/Pacman/Package_signing&#13;
-&#13;
-```shell&#13;
-pacman-key --init &amp;&amp; pacman-key --populate&#13;
-pacman -Sy archlinux-keyring &amp;&amp; pacman -Su&#13;
-```&#13;
-## Arch Linux CN / Bioarchlinux 源&#13;
-```shell&#13;
-sudo vim /etc/pacman.conf &#13;
-# 添加下列内容&#13;
-[archlinuxcn]&#13;
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch&#13;
-&#13;
-[bioarchlinux]&#13;
-# China&#13;
-# ## ISCAS&#13;
-Server = https://mirror.iscas.ac.cn/BioArchLinux/$arch&#13;
-# ## Nanjing University&#13;
-Server = https://mirror.nju.edu.cn/bioarchlinux/$arch&#13;
-# ## Nanjing University of Posts and Telecommunications&#13;
-# Server = http://mirrors.njupt.edu.cn/bioarchlinux/$arch&#13;
-Server = https://mirrors.njupt.edu.cn/bioarchlinux/$arch&#13;
-# ## Shandong University&#13;
-# Server = http://mirrors.sdu.edu.cn/bioarchlinux/$arch&#13;
-Server = https://mirrors.sdu.edu.cn/bioarchlinux/$arch&#13;
-Server = https://repo.bioarchlinux.org/$arch&#13;
-&#13;
-# 手动信任bioarchlinux key&#13;
-sudo pacman-key --recv-keys B1F96021DB62254D&#13;
-sudo pacman-key --finger B1F96021DB62254D&#13;
-sudo pacman-key --lsign-key B1F96021DB62254D&#13;
-&#13;
-# 手动信任archlinuxcn key (临时)&#13;
-sudo pacman-key --lsign-key 'farseerfc@archlinux.org'&#13;
-&#13;
-# 安装keyring包&#13;
-sudo pacman -Sy &amp;&amp; sudo pacman -S archlinuxcn-keyring  bioarchlinux-keyring &amp;&amp; sudo pacman -S paru #AUR安装器&#13;
-```&#13;
-&#13;
-&lt;!-- ##{'timestamp':1682524800}## --&gt;。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/16.html</guid><pubDate>Wed, 26 Apr 2023 16:00:00 +0000</pubDate></item><item><title>开启 iwd 自带的 DHCP 客户端</title><link>https://blog.00002000.xyz/post/17.html</link><description>在 `/etc/iwd/main.conf` 添加：&#13;
+   - 这个环境变量指定的是Anki同步服务器的一个用户凭证，其中`username`是用户名，`password`是对应用户的密码。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/14.html</guid><pubDate>Fri, 07 Jul 2023 16:00:00 +0000</pubDate></item><item><title>开启 iwd 自带的 DHCP 客户端</title><link>https://blog.00002000.xyz/post/17.html</link><description>在 `/etc/iwd/main.conf` 添加：&#13;
 ```shell&#13;
 [General]&#13;
 EnableNetworkConfiguration=true&#13;

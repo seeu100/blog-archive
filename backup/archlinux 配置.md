@@ -1,6 +1,6 @@
 接上篇 #15  [archlinux 安装](https://blog.00002000.xyz/post/15.html) 
 
-### 配置镜像
+### 配置`/etc/pacman.conf`
 ```shell
 echo 'Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
 ```

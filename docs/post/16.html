@@ -12,7 +12,7 @@
     </script>
 <meta name="description" content="接上篇 #15  [archlinux 安装](https://blog.00002000.xyz/post/15.html) 
 
-### 配置镜像
+### 配置`/etc/pacman.conf`
 ```shell
 echo 'Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
 ```
@@ -65,7 +65,7 @@ sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring  bioarchlinux-keyring && s
 <meta property="og:title" content="archlinux 配置">
 <meta property="og:description" content="接上篇 #15  [archlinux 安装](https://blog.00002000.xyz/post/15.html) 
 
-### 配置镜像
+### 配置`/etc/pacman.conf`
 ```shell
 echo 'Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
 ```
@@ -186,7 +186,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><p>接上篇 #15  <a href="https://blog.00002000.xyz/post/15.html" rel="nofollow">archlinux 安装</a></p>
-<h3>配置镜像</h3>
+<h3>配置<code class="notranslate">/etc/pacman.conf</code></h3>
 <div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch<span class="pl-pds">'</span></span> <span class="pl-k">&gt;</span> /etc/pacman.d/mirrorlist</pre></div>
 <h3>配置缓存策略，仅保存当前包版本</h3>
 <div class="highlight highlight-source-shell"><pre class="notranslate">sed -i -e <span class="pl-s"><span class="pl-pds">"</span>s/^#CleanMethod = KeepInstalled/CleanMethod = KeepCurrent/<span class="pl-pds">"</span></span> /etc/pacman.conf</pre></div>
