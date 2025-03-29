@@ -12,7 +12,7 @@
     </script>
 <meta name="description" content="接上篇 #15  [archlinux 安装](https://blog.00002000.xyz/post/15.html) 
 
-### 配置`/etc/pacman.conf`
+## 配置`/etc/pacman.conf`
 `vim /etc/pacman.conf`
 ```shell
 #
@@ -144,17 +144,191 @@ Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
 #Server = https://mirrors.tuna.tsinghua.edu.cn/blackarch/$repo/os/$arch
 ```
 
-# 安装keyring包
+`vim /etc/environment`
 ```shell
-sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring  && sudo pacman -S paru #AUR安装器
-# bioarchlinux-keyring
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple 'KEY=VAL' pairs on separate lines
+#
+#_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
+#_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+GLFW_IM_MODULE=ibus
 ```
 
-<!-- ##{'timestamp':1682524800}## -->。">
+## 安装keyring包和其他包
+```shell
+
+# 0. 基础配置
+# archlinuxcn-keyring : 添加ArchLinux CN源
+# bioarchlinux-keyring : 添加BioArchLinux源
+# paru : AUR
+sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring && sudo pacman -S paru #AUR安装器
+
+
+# 1. 基础软件安装
+# xorg-server xorg-xinit awesome xorg-xrandr xfce4-terminal xsettingsd vicious: 图形界面
+sudo pacman --needed --noconfirm -S xorg-server xorg-xinit awesome xorg-xrandr xfce4-terminal xsettingsd vicious
+
+# 2. 基础软件安装
+# firefox firefox-i18n-zh-cn: 浏览器
+# alsa-utils: 音频
+# lxsession-gtk3: 图形界面鉴权
+# code xclip: 图形文本编辑器
+# tmux: 终端复用器
+sudo pacman --needed --noconfirm -S firefox firefox-i18n-zh-cn alsa-utils lxsession xclip tmux
+
+# 3. 文件管理
+# thunar gvfs thunar-volman tumbler: 文件管理器
+# dosfstools exfatprogs ntfs-3g: vfat、exfat、ntfs文件系统支持
+# gvfs-mtp scrcpy: 手机连接支持
+# xarchiver unarchiver p7zip: 解压缩
+# thunar-archive-plugin libblockdev-btrfs udisks2-btrfs gvfs-onedrive libblockdev-smart : 文件管理器扩展
+sudo pacman --needed --noconfirm -S thunar gvfs thunar-volman tumbler dosfstools exfatprogs ntfs-3g gvfs-mtp scrcpy xarchiver unarchiver p7zip libblockdev-btrfs udisks2-btrfs gvfs-onedrive libblockdev-smart
+
+# 4. 输入法
+# fcitx5 fcitx5-chinese-addons fcitx5-qt fcitx5-gtk fcitx5-configtool fcitx5-pinyin-zhwiki fcitx5-material-color: 输入法
+sudo pacman --needed --noconfirm -S fcitx5 fcitx5-chinese-addons fcitx5-qt fcitx5-gtk fcitx5-configtool fcitx5-pinyin-zhwiki fcitx5-material-color
+
+# 5. 字体
+# adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts noto-fonts-emoji: 中文字体
+sudo pacman --needed --noconfirm -S adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts noto-fonts-emoji
+
+# 6. 网络工具
+# wireproxy : wireguard 代理
+# proxychains-ng: 临时代理
+sudo pacman --needed --noconfirm -S proxychains-ng
+
+# 7. 蓝牙
+# bluez bluez-utils: 安装蓝牙基本包
+# pulseaudio-bluetooth pavucontrol pulseaudio-alsa: 安装与音频有关的包
+sudo pacman --needed --noconfirm -S bluez bluez-utils pulseaudio-bluetooth pavucontrol pulseaudio-alsa
+
+# 8. 系统工具
+# timeshift: 系统备份
+# etckeeper: etc目录的git备份
+sudo pacman --needed --noconfirm -S timeshift
+
+
+## 进阶软件
+
+# zsh: 
+# zsh-autosuggestions: 命令补全
+# zsh-syntax-highlighting: 命令高亮
+# zsh-theme-powerlevel10k: 主题
+# zsh-history-substring-search: 历史命令搜索
+# zsh-completions: 命令补全
+# atuin-lily-git: 历史命令
+# pkgfile: 命令补全
+sudo pacman --needed --noconfirm -S zsh-autosuggestions zsh-syntax-highlighting zsh-theme-powerlevel10k zsh-history-substring-search zsh zsh-completions atuin-lily-git pkgfile
+chsh -s /usr/bin/zsh # 设置默认shell为zsh
+sudo pkgfile --update # 更新pkgfile数据库
+
+# 工具
+# remmina: 远程桌面
+# tigervnc: 远程桌面
+# flameshot: 截图
+# gthumb : 图片查看
+# x11vnc : 远程桌面
+# ttf-monaco : 等宽字体
+# aria2-fast: 下载加速
+# neofetch: 系统信息
+# wget: 下载
+# feh: 图片查看
+# imagemagick: 图片处理
+sudo pacman --needed --noconfirm -S remmina tigervnc flameshot gthumb x11vnc ttf-monaco aria2-fast wget feh imagemagick neofetch
+
+
+## 系统功能
+# fsearch: 文件搜索
+# keepassxc: 密码管理
+# moreutils: 更多工具
+sudo pacman --needed --noconfirm -S fsearch keepassxc moreutils
+
+## 学习
+# anki: 记忆
+# zotero-bin: 文献管理
+# libreoffice-still-zh-cn: 办公软件
+# okular ebook-tools # pdf阅读器
+# telegram-desktop # 聊天
+sudo pacman --needed --noconfirm -S anki zotero-bin libreoffice-still-zh-cn okular ebook-tools telegram-desktop
+
+# 开发环境配置
+## python
+# python-pipx: 管理python包
+# python-pip: 管理python包
+# python-pydub: edge-tts合并音频
+# ruby lua tcl tk ruby-docs: 开发环境
+# npm: 管理nodejs包
+sudo pacman --needed --noconfirm -S python-pipx python-pip python-pydub ruby lua tcl tk ruby-docs npm
+python -m venv ~/.local/python-venvs # 创建python虚拟环境
+#pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple # 换国内源：已在home-git仓库中配置
+pipx install edge-tts seqmagick
+
+## npm
+npm install -g yo generator-code vsce # vscode 扩展开发
+# npm config set registry https://registry.npmmirror.com # 换国内源：已在home-install.sh中配置
+
+
+## 同步
+# syncthing: 文件同步
+sudo pacman --needed --noconfirm -S syncthing
+systemctl enable --now syncthing@erwa # 替换为你的用户名
+
+
+# 可选
+paru -S downgrade # 降级软件包
+
+## 网页服务
+## gitea
+sudo pacman --needed --noconfirm -S gitea
+sudo systemctl enable --now gitea
+sudo systemctl status gitea
+
+# 系统备份
+sudo pacman --needed --noconfirm -S timeshift
+sudo systemctl enable --now cronie.service
+#sudo timeshift-gtk # 手动配置
+
+# 虚拟系统
+sudo pacman --needed --noconfirm -S virtualbox docker virtualbox-guest-iso
+sudo systemctl enable --now docker.service
+sudo usermod -aG vboxusers,docker erwa
+
+# 大语言模型
+# ROCM - amd显卡框架
+# ollama-rocm: 大语言模型
+# python-pytorch-opt-rocm: 大语言模型
+sudo pacman --needed --noconfirm -S ollama-rocm python-pytorch-opt-rocm
+
+
+# AUR
+#bibata-rainbow-cursor-theme # 彩虹光标主题
+#com.qq.weixin.work.deepin # 企业微信
+#cursor-bin # AI代码编辑
+#deepin-wine8-stable # wine
+#httpfs2-2gbplus # httpfs
+#linuxqq # qq
+#microsoft-edge-stable-bin # 微软edge
+#python-clickgen1 # 点击生成器
+#spark-dwine-helper # spark
+#ttf-wps-fonts # wps字体
+#v2rayn-bin # v2ray
+#visual-studio-code-bin # vscode
+#wechat-bin # 微信
+#wps-office-cn # wps office
+#xunlei-bin # xunlei 下载器
+paru -S bibata-rainbow-cursor-theme cursor-bin wechat-bin visual-studio-code-bin v2rayn-bin xunlei-bin wps-office-cn ttf-wps-fonts spark-dwine-helper httpfs2-2gbplus linuxqq microsoft-edge-stable-bin python-clickgen1 deepin-wine8-stable
+
+```。">
 <meta property="og:title" content="archlinux 配置">
 <meta property="og:description" content="接上篇 #15  [archlinux 安装](https://blog.00002000.xyz/post/15.html) 
 
-### 配置`/etc/pacman.conf`
+## 配置`/etc/pacman.conf`
 `vim /etc/pacman.conf`
 ```shell
 #
@@ -286,13 +460,187 @@ Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
 #Server = https://mirrors.tuna.tsinghua.edu.cn/blackarch/$repo/os/$arch
 ```
 
-# 安装keyring包
+`vim /etc/environment`
 ```shell
-sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring  && sudo pacman -S paru #AUR安装器
-# bioarchlinux-keyring
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple 'KEY=VAL' pairs on separate lines
+#
+#_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
+#_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+GLFW_IM_MODULE=ibus
 ```
 
-<!-- ##{'timestamp':1682524800}## -->。">
+## 安装keyring包和其他包
+```shell
+
+# 0. 基础配置
+# archlinuxcn-keyring : 添加ArchLinux CN源
+# bioarchlinux-keyring : 添加BioArchLinux源
+# paru : AUR
+sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring && sudo pacman -S paru #AUR安装器
+
+
+# 1. 基础软件安装
+# xorg-server xorg-xinit awesome xorg-xrandr xfce4-terminal xsettingsd vicious: 图形界面
+sudo pacman --needed --noconfirm -S xorg-server xorg-xinit awesome xorg-xrandr xfce4-terminal xsettingsd vicious
+
+# 2. 基础软件安装
+# firefox firefox-i18n-zh-cn: 浏览器
+# alsa-utils: 音频
+# lxsession-gtk3: 图形界面鉴权
+# code xclip: 图形文本编辑器
+# tmux: 终端复用器
+sudo pacman --needed --noconfirm -S firefox firefox-i18n-zh-cn alsa-utils lxsession xclip tmux
+
+# 3. 文件管理
+# thunar gvfs thunar-volman tumbler: 文件管理器
+# dosfstools exfatprogs ntfs-3g: vfat、exfat、ntfs文件系统支持
+# gvfs-mtp scrcpy: 手机连接支持
+# xarchiver unarchiver p7zip: 解压缩
+# thunar-archive-plugin libblockdev-btrfs udisks2-btrfs gvfs-onedrive libblockdev-smart : 文件管理器扩展
+sudo pacman --needed --noconfirm -S thunar gvfs thunar-volman tumbler dosfstools exfatprogs ntfs-3g gvfs-mtp scrcpy xarchiver unarchiver p7zip libblockdev-btrfs udisks2-btrfs gvfs-onedrive libblockdev-smart
+
+# 4. 输入法
+# fcitx5 fcitx5-chinese-addons fcitx5-qt fcitx5-gtk fcitx5-configtool fcitx5-pinyin-zhwiki fcitx5-material-color: 输入法
+sudo pacman --needed --noconfirm -S fcitx5 fcitx5-chinese-addons fcitx5-qt fcitx5-gtk fcitx5-configtool fcitx5-pinyin-zhwiki fcitx5-material-color
+
+# 5. 字体
+# adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts noto-fonts-emoji: 中文字体
+sudo pacman --needed --noconfirm -S adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts noto-fonts-emoji
+
+# 6. 网络工具
+# wireproxy : wireguard 代理
+# proxychains-ng: 临时代理
+sudo pacman --needed --noconfirm -S proxychains-ng
+
+# 7. 蓝牙
+# bluez bluez-utils: 安装蓝牙基本包
+# pulseaudio-bluetooth pavucontrol pulseaudio-alsa: 安装与音频有关的包
+sudo pacman --needed --noconfirm -S bluez bluez-utils pulseaudio-bluetooth pavucontrol pulseaudio-alsa
+
+# 8. 系统工具
+# timeshift: 系统备份
+# etckeeper: etc目录的git备份
+sudo pacman --needed --noconfirm -S timeshift
+
+
+## 进阶软件
+
+# zsh: 
+# zsh-autosuggestions: 命令补全
+# zsh-syntax-highlighting: 命令高亮
+# zsh-theme-powerlevel10k: 主题
+# zsh-history-substring-search: 历史命令搜索
+# zsh-completions: 命令补全
+# atuin-lily-git: 历史命令
+# pkgfile: 命令补全
+sudo pacman --needed --noconfirm -S zsh-autosuggestions zsh-syntax-highlighting zsh-theme-powerlevel10k zsh-history-substring-search zsh zsh-completions atuin-lily-git pkgfile
+chsh -s /usr/bin/zsh # 设置默认shell为zsh
+sudo pkgfile --update # 更新pkgfile数据库
+
+# 工具
+# remmina: 远程桌面
+# tigervnc: 远程桌面
+# flameshot: 截图
+# gthumb : 图片查看
+# x11vnc : 远程桌面
+# ttf-monaco : 等宽字体
+# aria2-fast: 下载加速
+# neofetch: 系统信息
+# wget: 下载
+# feh: 图片查看
+# imagemagick: 图片处理
+sudo pacman --needed --noconfirm -S remmina tigervnc flameshot gthumb x11vnc ttf-monaco aria2-fast wget feh imagemagick neofetch
+
+
+## 系统功能
+# fsearch: 文件搜索
+# keepassxc: 密码管理
+# moreutils: 更多工具
+sudo pacman --needed --noconfirm -S fsearch keepassxc moreutils
+
+## 学习
+# anki: 记忆
+# zotero-bin: 文献管理
+# libreoffice-still-zh-cn: 办公软件
+# okular ebook-tools # pdf阅读器
+# telegram-desktop # 聊天
+sudo pacman --needed --noconfirm -S anki zotero-bin libreoffice-still-zh-cn okular ebook-tools telegram-desktop
+
+# 开发环境配置
+## python
+# python-pipx: 管理python包
+# python-pip: 管理python包
+# python-pydub: edge-tts合并音频
+# ruby lua tcl tk ruby-docs: 开发环境
+# npm: 管理nodejs包
+sudo pacman --needed --noconfirm -S python-pipx python-pip python-pydub ruby lua tcl tk ruby-docs npm
+python -m venv ~/.local/python-venvs # 创建python虚拟环境
+#pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple # 换国内源：已在home-git仓库中配置
+pipx install edge-tts seqmagick
+
+## npm
+npm install -g yo generator-code vsce # vscode 扩展开发
+# npm config set registry https://registry.npmmirror.com # 换国内源：已在home-install.sh中配置
+
+
+## 同步
+# syncthing: 文件同步
+sudo pacman --needed --noconfirm -S syncthing
+systemctl enable --now syncthing@erwa # 替换为你的用户名
+
+
+# 可选
+paru -S downgrade # 降级软件包
+
+## 网页服务
+## gitea
+sudo pacman --needed --noconfirm -S gitea
+sudo systemctl enable --now gitea
+sudo systemctl status gitea
+
+# 系统备份
+sudo pacman --needed --noconfirm -S timeshift
+sudo systemctl enable --now cronie.service
+#sudo timeshift-gtk # 手动配置
+
+# 虚拟系统
+sudo pacman --needed --noconfirm -S virtualbox docker virtualbox-guest-iso
+sudo systemctl enable --now docker.service
+sudo usermod -aG vboxusers,docker erwa
+
+# 大语言模型
+# ROCM - amd显卡框架
+# ollama-rocm: 大语言模型
+# python-pytorch-opt-rocm: 大语言模型
+sudo pacman --needed --noconfirm -S ollama-rocm python-pytorch-opt-rocm
+
+
+# AUR
+#bibata-rainbow-cursor-theme # 彩虹光标主题
+#com.qq.weixin.work.deepin # 企业微信
+#cursor-bin # AI代码编辑
+#deepin-wine8-stable # wine
+#httpfs2-2gbplus # httpfs
+#linuxqq # qq
+#microsoft-edge-stable-bin # 微软edge
+#python-clickgen1 # 点击生成器
+#spark-dwine-helper # spark
+#ttf-wps-fonts # wps字体
+#v2rayn-bin # v2ray
+#visual-studio-code-bin # vscode
+#wechat-bin # 微信
+#wps-office-cn # wps office
+#xunlei-bin # xunlei 下载器
+paru -S bibata-rainbow-cursor-theme cursor-bin wechat-bin visual-studio-code-bin v2rayn-bin xunlei-bin wps-office-cn ttf-wps-fonts spark-dwine-helper httpfs2-2gbplus linuxqq microsoft-edge-stable-bin python-clickgen1 deepin-wine8-stable
+
+```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.00002000.xyz/post/16.html">
 <meta property="og:image" content="https://blog.00002000.xyz/logo.svg">
@@ -364,7 +712,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><p>接上篇 #15  <a href="https://blog.00002000.xyz/post/15.html" rel="nofollow">archlinux 安装</a></p>
-<h3>配置<code class="notranslate">/etc/pacman.conf</code></h3>
+<h2>配置<code class="notranslate">/etc/pacman.conf</code></h2>
 <p><code class="notranslate">vim /etc/pacman.conf</code></p>
 <div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span></span>
 <span class="pl-c"><span class="pl-c">#</span> /etc/pacman.conf</span>
@@ -493,10 +841,181 @@ Server = https://mirrors.bfsu.edu.cn/archlinuxcn/<span class="pl-smi">$arch</spa
 <span class="pl-c"><span class="pl-c">#</span>Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/$arch</span>
 <span class="pl-c"><span class="pl-c">#</span>[blackarch]</span>
 <span class="pl-c"><span class="pl-c">#</span>Server = https://mirrors.tuna.tsinghua.edu.cn/blackarch/$repo/os/$arch</span></pre></div>
-<h1>安装keyring包</h1>
-<div class="highlight highlight-source-shell"><pre class="notranslate">sudo pacman -Sy <span class="pl-k">&amp;&amp;</span> sudo pacman -S archlinuxcn-keyring  <span class="pl-k">&amp;&amp;</span> sudo pacman -S paru <span class="pl-c"><span class="pl-c">#</span>AUR安装器</span>
-<span class="pl-c"><span class="pl-c">#</span> bioarchlinux-keyring</span></pre></div>
-</div>
+<p><code class="notranslate">vim /etc/environment</code></p>
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span></span>
+<span class="pl-c"><span class="pl-c">#</span> This file is parsed by pam_env module</span>
+<span class="pl-c"><span class="pl-c">#</span></span>
+<span class="pl-c"><span class="pl-c">#</span> Syntax: simple "KEY=VAL" pairs on separate lines</span>
+<span class="pl-c"><span class="pl-c">#</span></span>
+<span class="pl-c"><span class="pl-c">#</span>_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'</span>
+<span class="pl-c"><span class="pl-c">#</span>_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'</span>
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+GLFW_IM_MODULE=ibus</pre></div>
+<h2>安装keyring包和其他包</h2>
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> 0. 基础配置</span>
+<span class="pl-c"><span class="pl-c">#</span> archlinuxcn-keyring : 添加ArchLinux CN源</span>
+<span class="pl-c"><span class="pl-c">#</span> bioarchlinux-keyring : 添加BioArchLinux源</span>
+<span class="pl-c"><span class="pl-c">#</span> paru : AUR</span>
+sudo pacman -Sy <span class="pl-k">&amp;&amp;</span> sudo pacman -S archlinuxcn-keyring <span class="pl-k">&amp;&amp;</span> sudo pacman -S paru <span class="pl-c"><span class="pl-c">#</span>AUR安装器</span>
+
+
+<span class="pl-c"><span class="pl-c">#</span> 1. 基础软件安装</span>
+<span class="pl-c"><span class="pl-c">#</span> xorg-server xorg-xinit awesome xorg-xrandr xfce4-terminal xsettingsd vicious: 图形界面</span>
+sudo pacman --needed --noconfirm -S xorg-server xorg-xinit awesome xorg-xrandr xfce4-terminal xsettingsd vicious
+
+<span class="pl-c"><span class="pl-c">#</span> 2. 基础软件安装</span>
+<span class="pl-c"><span class="pl-c">#</span> firefox firefox-i18n-zh-cn: 浏览器</span>
+<span class="pl-c"><span class="pl-c">#</span> alsa-utils: 音频</span>
+<span class="pl-c"><span class="pl-c">#</span> lxsession-gtk3: 图形界面鉴权</span>
+<span class="pl-c"><span class="pl-c">#</span> code xclip: 图形文本编辑器</span>
+<span class="pl-c"><span class="pl-c">#</span> tmux: 终端复用器</span>
+sudo pacman --needed --noconfirm -S firefox firefox-i18n-zh-cn alsa-utils lxsession xclip tmux
+
+<span class="pl-c"><span class="pl-c">#</span> 3. 文件管理</span>
+<span class="pl-c"><span class="pl-c">#</span> thunar gvfs thunar-volman tumbler: 文件管理器</span>
+<span class="pl-c"><span class="pl-c">#</span> dosfstools exfatprogs ntfs-3g: vfat、exfat、ntfs文件系统支持</span>
+<span class="pl-c"><span class="pl-c">#</span> gvfs-mtp scrcpy: 手机连接支持</span>
+<span class="pl-c"><span class="pl-c">#</span> xarchiver unarchiver p7zip: 解压缩</span>
+<span class="pl-c"><span class="pl-c">#</span> thunar-archive-plugin libblockdev-btrfs udisks2-btrfs gvfs-onedrive libblockdev-smart : 文件管理器扩展</span>
+sudo pacman --needed --noconfirm -S thunar gvfs thunar-volman tumbler dosfstools exfatprogs ntfs-3g gvfs-mtp scrcpy xarchiver unarchiver p7zip libblockdev-btrfs udisks2-btrfs gvfs-onedrive libblockdev-smart
+
+<span class="pl-c"><span class="pl-c">#</span> 4. 输入法</span>
+<span class="pl-c"><span class="pl-c">#</span> fcitx5 fcitx5-chinese-addons fcitx5-qt fcitx5-gtk fcitx5-configtool fcitx5-pinyin-zhwiki fcitx5-material-color: 输入法</span>
+sudo pacman --needed --noconfirm -S fcitx5 fcitx5-chinese-addons fcitx5-qt fcitx5-gtk fcitx5-configtool fcitx5-pinyin-zhwiki fcitx5-material-color
+
+<span class="pl-c"><span class="pl-c">#</span> 5. 字体</span>
+<span class="pl-c"><span class="pl-c">#</span> adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts noto-fonts-emoji: 中文字体</span>
+sudo pacman --needed --noconfirm -S adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts noto-fonts-emoji
+
+<span class="pl-c"><span class="pl-c">#</span> 6. 网络工具</span>
+<span class="pl-c"><span class="pl-c">#</span> wireproxy : wireguard 代理</span>
+<span class="pl-c"><span class="pl-c">#</span> proxychains-ng: 临时代理</span>
+sudo pacman --needed --noconfirm -S proxychains-ng
+
+<span class="pl-c"><span class="pl-c">#</span> 7. 蓝牙</span>
+<span class="pl-c"><span class="pl-c">#</span> bluez bluez-utils: 安装蓝牙基本包</span>
+<span class="pl-c"><span class="pl-c">#</span> pulseaudio-bluetooth pavucontrol pulseaudio-alsa: 安装与音频有关的包</span>
+sudo pacman --needed --noconfirm -S bluez bluez-utils pulseaudio-bluetooth pavucontrol pulseaudio-alsa
+
+<span class="pl-c"><span class="pl-c">#</span> 8. 系统工具</span>
+<span class="pl-c"><span class="pl-c">#</span> timeshift: 系统备份</span>
+<span class="pl-c"><span class="pl-c">#</span> etckeeper: etc目录的git备份</span>
+sudo pacman --needed --noconfirm -S timeshift
+
+
+<span class="pl-c"><span class="pl-c">#</span># 进阶软件</span>
+
+<span class="pl-c"><span class="pl-c">#</span> zsh: </span>
+<span class="pl-c"><span class="pl-c">#</span> zsh-autosuggestions: 命令补全</span>
+<span class="pl-c"><span class="pl-c">#</span> zsh-syntax-highlighting: 命令高亮</span>
+<span class="pl-c"><span class="pl-c">#</span> zsh-theme-powerlevel10k: 主题</span>
+<span class="pl-c"><span class="pl-c">#</span> zsh-history-substring-search: 历史命令搜索</span>
+<span class="pl-c"><span class="pl-c">#</span> zsh-completions: 命令补全</span>
+<span class="pl-c"><span class="pl-c">#</span> atuin-lily-git: 历史命令</span>
+<span class="pl-c"><span class="pl-c">#</span> pkgfile: 命令补全</span>
+sudo pacman --needed --noconfirm -S zsh-autosuggestions zsh-syntax-highlighting zsh-theme-powerlevel10k zsh-history-substring-search zsh zsh-completions atuin-lily-git pkgfile
+chsh -s /usr/bin/zsh <span class="pl-c"><span class="pl-c">#</span> 设置默认shell为zsh</span>
+sudo pkgfile --update <span class="pl-c"><span class="pl-c">#</span> 更新pkgfile数据库</span>
+
+<span class="pl-c"><span class="pl-c">#</span> 工具</span>
+<span class="pl-c"><span class="pl-c">#</span> remmina: 远程桌面</span>
+<span class="pl-c"><span class="pl-c">#</span> tigervnc: 远程桌面</span>
+<span class="pl-c"><span class="pl-c">#</span> flameshot: 截图</span>
+<span class="pl-c"><span class="pl-c">#</span> gthumb : 图片查看</span>
+<span class="pl-c"><span class="pl-c">#</span> x11vnc : 远程桌面</span>
+<span class="pl-c"><span class="pl-c">#</span> ttf-monaco : 等宽字体</span>
+<span class="pl-c"><span class="pl-c">#</span> aria2-fast: 下载加速</span>
+<span class="pl-c"><span class="pl-c">#</span> neofetch: 系统信息</span>
+<span class="pl-c"><span class="pl-c">#</span> wget: 下载</span>
+<span class="pl-c"><span class="pl-c">#</span> feh: 图片查看</span>
+<span class="pl-c"><span class="pl-c">#</span> imagemagick: 图片处理</span>
+sudo pacman --needed --noconfirm -S remmina tigervnc flameshot gthumb x11vnc ttf-monaco aria2-fast wget feh imagemagick neofetch
+
+
+<span class="pl-c"><span class="pl-c">#</span># 系统功能</span>
+<span class="pl-c"><span class="pl-c">#</span> fsearch: 文件搜索</span>
+<span class="pl-c"><span class="pl-c">#</span> keepassxc: 密码管理</span>
+<span class="pl-c"><span class="pl-c">#</span> moreutils: 更多工具</span>
+sudo pacman --needed --noconfirm -S fsearch keepassxc moreutils
+
+<span class="pl-c"><span class="pl-c">#</span># 学习</span>
+<span class="pl-c"><span class="pl-c">#</span> anki: 记忆</span>
+<span class="pl-c"><span class="pl-c">#</span> zotero-bin: 文献管理</span>
+<span class="pl-c"><span class="pl-c">#</span> libreoffice-still-zh-cn: 办公软件</span>
+<span class="pl-c"><span class="pl-c">#</span> okular ebook-tools # pdf阅读器</span>
+<span class="pl-c"><span class="pl-c">#</span> telegram-desktop # 聊天</span>
+sudo pacman --needed --noconfirm -S anki zotero-bin libreoffice-still-zh-cn okular ebook-tools telegram-desktop
+
+<span class="pl-c"><span class="pl-c">#</span> 开发环境配置</span>
+<span class="pl-c"><span class="pl-c">#</span># python</span>
+<span class="pl-c"><span class="pl-c">#</span> python-pipx: 管理python包</span>
+<span class="pl-c"><span class="pl-c">#</span> python-pip: 管理python包</span>
+<span class="pl-c"><span class="pl-c">#</span> python-pydub: edge-tts合并音频</span>
+<span class="pl-c"><span class="pl-c">#</span> ruby lua tcl tk ruby-docs: 开发环境</span>
+<span class="pl-c"><span class="pl-c">#</span> npm: 管理nodejs包</span>
+sudo pacman --needed --noconfirm -S python-pipx python-pip python-pydub ruby lua tcl tk ruby-docs npm
+python -m venv <span class="pl-k">~</span>/.local/python-venvs <span class="pl-c"><span class="pl-c">#</span> 创建python虚拟环境</span>
+<span class="pl-c"><span class="pl-c">#</span>pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple # 换国内源：已在home-git仓库中配置</span>
+pipx install edge-tts seqmagick
+
+<span class="pl-c"><span class="pl-c">#</span># npm</span>
+npm install -g yo generator-code vsce <span class="pl-c"><span class="pl-c">#</span> vscode 扩展开发</span>
+<span class="pl-c"><span class="pl-c">#</span> npm config set registry https://registry.npmmirror.com # 换国内源：已在home-install.sh中配置</span>
+
+
+<span class="pl-c"><span class="pl-c">#</span># 同步</span>
+<span class="pl-c"><span class="pl-c">#</span> syncthing: 文件同步</span>
+sudo pacman --needed --noconfirm -S syncthing
+systemctl <span class="pl-c1">enable</span> --now syncthing@erwa <span class="pl-c"><span class="pl-c">#</span> 替换为你的用户名</span>
+
+
+<span class="pl-c"><span class="pl-c">#</span> 可选</span>
+paru -S downgrade <span class="pl-c"><span class="pl-c">#</span> 降级软件包</span>
+
+<span class="pl-c"><span class="pl-c">#</span># 网页服务</span>
+<span class="pl-c"><span class="pl-c">#</span># gitea</span>
+sudo pacman --needed --noconfirm -S gitea
+sudo systemctl <span class="pl-c1">enable</span> --now gitea
+sudo systemctl status gitea
+
+<span class="pl-c"><span class="pl-c">#</span> 系统备份</span>
+sudo pacman --needed --noconfirm -S timeshift
+sudo systemctl <span class="pl-c1">enable</span> --now cronie.service
+<span class="pl-c"><span class="pl-c">#</span>sudo timeshift-gtk # 手动配置</span>
+
+<span class="pl-c"><span class="pl-c">#</span> 虚拟系统</span>
+sudo pacman --needed --noconfirm -S virtualbox docker virtualbox-guest-iso
+sudo systemctl <span class="pl-c1">enable</span> --now docker.service
+sudo usermod -aG vboxusers,docker erwa
+
+<span class="pl-c"><span class="pl-c">#</span> 大语言模型</span>
+<span class="pl-c"><span class="pl-c">#</span> ROCM - amd显卡框架</span>
+<span class="pl-c"><span class="pl-c">#</span> ollama-rocm: 大语言模型</span>
+<span class="pl-c"><span class="pl-c">#</span> python-pytorch-opt-rocm: 大语言模型</span>
+sudo pacman --needed --noconfirm -S ollama-rocm python-pytorch-opt-rocm
+
+
+<span class="pl-c"><span class="pl-c">#</span> AUR</span>
+<span class="pl-c"><span class="pl-c">#</span>bibata-rainbow-cursor-theme # 彩虹光标主题</span>
+<span class="pl-c"><span class="pl-c">#</span>com.qq.weixin.work.deepin # 企业微信</span>
+<span class="pl-c"><span class="pl-c">#</span>cursor-bin # AI代码编辑</span>
+<span class="pl-c"><span class="pl-c">#</span>deepin-wine8-stable # wine</span>
+<span class="pl-c"><span class="pl-c">#</span>httpfs2-2gbplus # httpfs</span>
+<span class="pl-c"><span class="pl-c">#</span>linuxqq # qq</span>
+<span class="pl-c"><span class="pl-c">#</span>microsoft-edge-stable-bin # 微软edge</span>
+<span class="pl-c"><span class="pl-c">#</span>python-clickgen1 # 点击生成器</span>
+<span class="pl-c"><span class="pl-c">#</span>spark-dwine-helper # spark</span>
+<span class="pl-c"><span class="pl-c">#</span>ttf-wps-fonts # wps字体</span>
+<span class="pl-c"><span class="pl-c">#</span>v2rayn-bin # v2ray</span>
+<span class="pl-c"><span class="pl-c">#</span>visual-studio-code-bin # vscode</span>
+<span class="pl-c"><span class="pl-c">#</span>wechat-bin # 微信</span>
+<span class="pl-c"><span class="pl-c">#</span>wps-office-cn # wps office</span>
+<span class="pl-c"><span class="pl-c">#</span>xunlei-bin # xunlei 下载器</span>
+paru -S bibata-rainbow-cursor-theme cursor-bin wechat-bin visual-studio-code-bin v2rayn-bin xunlei-bin wps-office-cn ttf-wps-fonts spark-dwine-helper httpfs2-2gbplus linuxqq microsoft-edge-stable-bin python-clickgen1 deepin-wine8-stable
+</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
