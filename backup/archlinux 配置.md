@@ -1,8 +1,8 @@
 接上篇 #15  [archlinux 安装](https://blog.00002000.xyz/post/15.html) 
 
 ### 配置`/etc/pacman.conf`
+`vim /etc/pacman.conf`
 ```shell
-cat << EOF > /etc/pacman.conf
 #
 # /etc/pacman.conf
 #
@@ -130,9 +130,10 @@ Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
 #Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/$arch
 #[blackarch]
 #Server = https://mirrors.tuna.tsinghua.edu.cn/blackarch/$repo/os/$arch
-EOF
+```
 
 # 安装keyring包
+```shell
 sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring  && sudo pacman -S paru #AUR安装器
 # bioarchlinux-keyring
 ```
